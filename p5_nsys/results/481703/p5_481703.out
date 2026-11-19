@@ -1,0 +1,18 @@
+geometry: 80 layers x 32768 tokens, tok_bytes=2048, item=512 KiB, items=20480, file=10.00 GiB
+wrote /tmp/kvtest_481703/kv512k.bin: 10.00 GiB in 0.42 s (25.52 GB/s)
+run 4: total 0.2389 s  read 0.2386 s  44.94 GB/s  layer0 3.91 ms  last 238.90 ms  mismatches 0
+median 0.2440 s (44.01 GB/s), IQR [0.2389, 0.2452]
+run 4: total 0.2383 s  read 0.2375 s  45.05 GB/s  layer0 3.82 ms  last 238.34 ms  mismatches 0
+median 0.2393 s (44.88 GB/s), IQR [0.2383, 0.2769]
+median 0.2653 s (40.47 GB/s), IQR [0.2653, 0.2653]
+Collecting data...
+Generating '/tmp/nsys-report-cdc3.qdstrm'
+[1/1] [0%                          ] copy_t11_q32.nsys-rep[1/1] [0%                          ] copy_t11_q32.nsys-rep[1/1] [5%                          ] copy_t11_q32.nsys-rep[1/1] [8%                          ] copy_t11_q32.nsys-rep[1/1] [14%                         ] copy_t11_q32.nsys-rep[1/1] [==20%                       ] copy_t11_q32.nsys-rep[1/1] [====25%                     ] copy_t11_q32.nsys-rep[1/1] [======33%                   ] copy_t11_q32.nsys-rep[1/1] [=========43%                ] copy_t11_q32.nsys-rep[1/1] [===========53%              ] copy_t11_q32.nsys-rep[1/1] [==============64%           ] copy_t11_q32.nsys-rep[1/1] [================68%         ] copy_t11_q32.nsys-rep[1/1] [===================81%      ] copy_t11_q32.nsys-rep[1/1] [========================100%] copy_t11_q32.nsys-rep[1/1] [========================100%] copy_t11_q32.nsys-rep
+Generated:
+    /home/u1444832/p5_nsys/results/481703/copy_t11_q32.nsys-rep
+median 0.4341 s (24.74 GB/s), IQR [0.4341, 0.4341]
+Collecting data...
+Generating '/tmp/nsys-report-23fe.qdstrm'
+[1/1] [0%                          ] nooverlap_copy_t11_q32.nsys-rep[1/1] [0%                          ] nooverlap_copy_t11_q32.nsys-rep[1/1] [0%                          ] nooverlap_copy_t11_q32.nsys-rep[1/1] [5%                          ] nooverlap_copy_t11_q32.nsys-rep[1/1] [9%                          ] nooverlap_copy_t11_q32.nsys-rep[1/1] [=15%                        ] nooverlap_copy_t11_q32.nsys-rep[1/1] [==21%                       ] nooverlap_copy_t11_q32.nsys-rep[1/1] [====27%                     ] nooverlap_copy_t11_q32.nsys-rep[1/1] [======35%                   ] nooverlap_copy_t11_q32.nsys-rep[1/1] [==========47%               ] nooverlap_copy_t11_q32.nsys-rep[1/1] [=============58%            ] nooverlap_copy_t11_q32.nsys-rep[1/1] [================69%         ] nooverlap_copy_t11_q32.nsys-rep[1/1] [====================84%     ] nooverlap_copy_t11_q32.nsys-rep[1/1] [========================100%] nooverlap_copy_t11_q32.nsys-rep[1/1] [========================100%] nooverlap_copy_t11_q32.nsys-rep
+Generated:
+    /home/u1444832/p5_nsys/results/481703/nooverlap_copy_t11_q32.nsys-rep

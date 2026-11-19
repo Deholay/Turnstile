@@ -1,0 +1,20 @@
+{"event": "store", "req": "0", "tokens": 32768, "path": "/tmp/kvr_472211_8b/a875819e454fc7f25eb7c94426a9b4bd_32768.kv"}
+{"event": "load", "req": "1", "tokens": 32768, "wall_s": 0.12435771804302931, "pipe_s": 0.08591956994496286, "read_s": 0.08587675401940942, "layer0_ms": 3.180896043777466, "last_ms": 85.90611267089844}
+{"event": "store", "req": "3", "tokens": 32768, "path": "/tmp/kvr_472211_8b/ece2033f390e841040c79178fc117f41_32768.kv"}
+{"event": "load", "req": "4", "tokens": 32768, "wall_s": 0.11381373391486704, "pipe_s": 0.08220635401085019, "read_s": 0.08214119193144143, "layer0_ms": 3.59932804107666, "last_ms": 82.1923828125}
+{"event": "store", "req": "6", "tokens": 32768, "path": "/tmp/kvr_472211_8b/344f606aa342bb85a7b26eeda865302d_32768.kv"}
+{"event": "load", "req": "7", "tokens": 32768, "wall_s": 0.11557257594540715, "pipe_s": 0.08407468418590724, "read_s": 0.0840400829911232, "layer0_ms": 3.214751958847046, "last_ms": 84.061279296875}
+{"event": "store", "req": "9", "tokens": 32768, "path": "/tmp/kvr_472211_8b/44faa79cc8aa14d703915b87eed1f3c6_32768.kv"}
+{"event": "load", "req": "10", "tokens": 32768, "wall_s": 0.12734044715762138, "pipe_s": 0.08531005377881229, "read_s": 0.08524532592855394, "layer0_ms": 4.409183979034424, "last_ms": 85.29673767089844}
+{"event": "store", "req": "12", "tokens": 32768, "path": "/tmp/kvr_472211_8b/27d10a650b991c201f5e1afdb1a0a3c8_32768.kv"}
+{"event": "load", "req": "13", "tokens": 32768, "wall_s": 0.11807687021791935, "pipe_s": 0.08378018788062036, "read_s": 0.0837451028637588, "layer0_ms": 3.095360040664673, "last_ms": 83.76681518554688}
+{"event": "store", "req": "15", "tokens": 32768, "path": "/tmp/kvr_472211_8b/74f467fee3891c1fd312820437e12593_32768.kv"}
+{"event": "load", "req": "16", "tokens": 32768, "wall_s": 0.12211076193489134, "pipe_s": 0.08635190804488957, "read_s": 0.08627499802969396, "layer0_ms": 3.1380159854888916, "last_ms": 86.33763122558594}
+{"event": "store", "req": "18", "tokens": 32768, "path": "/tmp/kvr_472211_8b/eb02941fb411ad7399e4a178c0872c4c_32768.kv"}
+{"event": "load", "req": "19", "tokens": 32768, "wall_s": 0.13245927589014173, "pipe_s": 0.08950369013473392, "read_s": 0.08946003904566169, "layer0_ms": 3.512864112854004, "last_ms": 89.4892807006836}
+{"event": "store", "req": "21", "tokens": 32768, "path": "/tmp/kvr_472211_8b/d79abbcc3e1bdd89f2f8c142f4ef2ec6_32768.kv"}
+{"event": "load", "req": "22", "tokens": 32768, "wall_s": 0.11985392891801894, "pipe_s": 0.08421310409903526, "read_s": 0.08416071999818087, "layer0_ms": 3.3326079845428467, "last_ms": 84.19731140136719}
+{"event": "store", "req": "24", "tokens": 32768, "path": "/tmp/kvr_472211_8b/d10b79c52881eae0b6b692a29fa5afe1_32768.kv"}
+{"event": "load", "req": "26", "tokens": 32768, "wall_s": 0.12489691213704646, "pipe_s": 0.08501246804371476, "read_s": 0.08493568398989737, "layer0_ms": 3.058176040649414, "last_ms": 84.9993896484375, "verify_ok": true}
+{"event": "store", "req": "27", "tokens": 32768, "path": "/tmp/kvr_472211_8b/da5817fd83ce157fb1f494a508d9dbad_32768.kv"}
+{"event": "load", "req": "29", "tokens": 32768, "wall_s": 0.11949524492956698, "pipe_s": 0.08656462817452848, "read_s": 0.0865050139836967, "layer0_ms": 3.2810239791870117, "last_ms": 86.55097961425781, "verify_ok": true}

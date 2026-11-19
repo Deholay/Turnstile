@@ -40,7 +40,7 @@ snapshot() {
   "$VENV/bin/python" -c 'import torch, transformers; print("torch", torch.__version__, "cuda", torch.version.cuda); print("transformers", transformers.__version__)'
   "$FIO" --version
   echo "model $MODEL commit $(head -1 "$MODEL/.cache/huggingface/download/config.json.metadata" 2>/dev/null || echo unknown)"
-  findmnt -T "$FIO_FILE" -o SOURCE,TARGET,FSTYPE
+  findmnt -T "$(dirname "$FIO_FILE")" -o SOURCE,TARGET,FSTYPE   # fio creates FIO_FILE later; findmnt fails on a missing path
   echo "LENGTHS=$LENGTHS WARMUP=$WARMUP RUNS=$RUNS FIO_FILE=$FIO_FILE"
 } > "$OUT/env.txt" 2>&1
 

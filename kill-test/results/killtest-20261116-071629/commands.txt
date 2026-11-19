@@ -1,0 +1,2 @@
+/data/personal/r15942056/tools/bin/fio --name=seqread --filename=/data/personal/r15942056/kvtest/fio-seqread-8g.dat --size=8G --direct=1 --rw=read --bs=1M --iodepth=32 --ioengine=io_uring --numjobs=1 --runtime=15 --time_based --output-format=json
+/data/personal/r15942056/venvs/kvssd/bin/python /data/personal/r15942056/kvssd/kill-test/prefill_bench.py --model /data/personal/r15942056/models/Llama-3.1-8B-Instruct --lengths 4096 8192 16384 32768 --warmup 3 --runs 5 --out /data/personal/r15942056/results/killtest-20261116-071629

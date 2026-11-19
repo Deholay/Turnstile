@@ -1,0 +1,12 @@
+# job 481707 on hgpn44 Thu Nov 19 13:26:14 CST 2026 gpu_numa=1 nsys=/work/HPC_software/LMOD/nvidia/packages/cuda-12.6/bin/nsys
+NVIDIA H200, 550.127.08, 00000000:9A:00.0
+NVIDIA Nsight Systems version 2024.5.1.113-245134619542v0
+6dc86d1619d8fea1f75bc3d0950e0ed8789808506df6454f9a34d99d7c1ed2e5  /home/u1444832/p5_nsys/restore.cu
+83899f533ca5bca146e3ddf5642b97d057a424be485cb440c2cbf1d34d43e0e1  /home/u1444832/p5_nsys/kvr_core.cuh
+31cefdf92f6c14b883e2d607a607769de05acae960e671ae5fd4cfb4496b196c  /home/u1444832/p5_nsys/restore
+67021f5f46799346271dc23d56593d24a1a8517281822e6ea3ee1f7e2bd49717  /home/u1444832/harness/restore
+c6234549735f7cde8d9dd20bada513ba3c67338d5974e98efb53e67da22d009d  /home/u1444832/p5_nsys/p5b_job.sh
+geometry: 80 layers x 32768 tokens, tok_bytes=2048, item=512 KiB, items=20480, file=10.00 GiB
+wrote /tmp/kvtest_481707/kv512k.bin: 10.00 GiB in 0.41 s (26.30 GB/s)
+numactl --cpunodebind=1 --membind=1 /work/HPC_software/LMOD/nvidia/packages/cuda-12.6/bin/nsys profile -t cuda,nvtx -s none --cpuctxsw=none --force-overwrite true -o /home/u1444832/p5_nsys/results/481707/copy_t8_q32 /home/u1444832/p5_nsys/restore --file /tmp/kvtest_481707/kv512k.bin --mode copy --qd 32 --threads 8 --runs 1 --warmup 1
+# done Thu Nov 19 13:26:24 CST 2026

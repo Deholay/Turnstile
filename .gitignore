@@ -1,0 +1,14 @@
+__pycache__/
+# Nsight Systems traces and their SQLite exports: large and regenerable; kept locally and on NCHC
+*.nsys-rep
+*.sqlite
+# Packed copy of bundle_8gpu/ for sending; rebuild with tar
+bundle_8gpu.tar.gz
+# LaTeX build output
+ppopp-template/*.aux
+ppopp-template/*.log
+ppopp-template/*.fls
+ppopp-template/*.fdb_latexmk
+ppopp-template/*.out
+ppopp-template/*.bbl
+ppopp-template/*.blg

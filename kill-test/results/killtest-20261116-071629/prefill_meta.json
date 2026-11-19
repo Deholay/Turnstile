@@ -1,0 +1,13 @@
+{
+  "model": "/data/personal/r15942056/models/Llama-3.1-8B-Instruct",
+  "dtype": "torch.bfloat16",
+  "attn_implementation": "sdpa",
+  "num_hidden_layers": 32,
+  "num_key_value_heads": 8,
+  "head_dim": 128,
+  "kv_bytes_per_token_formula": 131072,
+  "h2d_pinned_bytes_per_s": 24409715123.741734,
+  "torch": "2.11.0+cu128",
+  "gpu": "NVIDIA GeForce RTX 5090",
+  "seed": 0
+}

@@ -1,0 +1,15 @@
+# job 481692 on hgpn44 Thu Nov 19 13:21:23 CST 2026 gpu_numa=1 nsys=/work/HPC_software/LMOD/nvidia/packages/cuda-12.6/bin/nsys
+NVIDIA H200, 550.127.08, 00000000:9A:00.0
+NVIDIA Nsight Systems version 2024.5.1.113-245134619542v0
+6dc86d1619d8fea1f75bc3d0950e0ed8789808506df6454f9a34d99d7c1ed2e5  /home/u1444832/p5_nsys/restore.cu
+67464e7f1c1ea838f00d38f991e63fa4f20d74a21bb4d499bca0505fc8467447  /home/u1444832/p5_nsys/kvr_core.cuh
+ce5bea833de10a74bccf445370e7f5afb8f916a8fa4c98baf780322e13630d4c  /home/u1444832/p5_nsys/restore
+67021f5f46799346271dc23d56593d24a1a8517281822e6ea3ee1f7e2bd49717  /home/u1444832/harness/restore
+5b33b352234310edf078478144e82c9a667ded9af04bd8fb576a9f5877c7781d  /home/u1444832/p5_nsys/p5_job.sh
+geometry: 80 layers x 32768 tokens, tok_bytes=2048, item=512 KiB, items=20480, file=10.00 GiB
+wrote /tmp/kvtest_481692/kv512k.bin: 10.00 GiB in 0.42 s (25.35 GB/s)
+numactl --cpunodebind=1 --membind=1 /home/u1444832/p5_nsys/restore --file /tmp/kvtest_481692/kv512k.bin --mode copy --threads 11 --qd 32 --label p5_copy_t11_q32
+numactl --cpunodebind=1 --membind=1 /home/u1444832/harness/restore --file /tmp/kvtest_481692/kv512k.bin --mode copy --threads 11 --qd 32 --label h1115_copy_t11_q32
+numactl --cpunodebind=1 --membind=1 /work/HPC_software/LMOD/nvidia/packages/cuda-12.6/bin/nsys profile -t cuda,nvtx -s none --cpuctxsw=none --force-overwrite true -o /home/u1444832/p5_nsys/results/481692/copy_t11_q32 /home/u1444832/p5_nsys/restore --file /tmp/kvtest_481692/kv512k.bin --mode copy --threads 11 --qd 32 --runs 1 --warmup 1
+numactl --cpunodebind=1 --membind=1 /work/HPC_software/LMOD/nvidia/packages/cuda-12.6/bin/nsys profile -t cuda,nvtx -s none --cpuctxsw=none --force-overwrite true -o /home/u1444832/p5_nsys/results/481692/nooverlap_copy_t11_q32 /home/u1444832/p5_nsys/restore --file /tmp/kvtest_481692/kv512k.bin --mode copy --threads 11 --qd 32 --no-overlap --runs 1 --warmup 1
+# done Thu Nov 19 13:21:50 CST 2026

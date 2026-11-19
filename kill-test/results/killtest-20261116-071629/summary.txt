@@ -1,0 +1,7 @@
+fio seq read (bs=1M, QD32, O_DIRECT): median 7.12 GB/s, IQR 0.00 GB/s, 5 runs
+pinned H2D: 24.41 GB/s; KV/token 128 KiB
+tokens	prefill_median_s	prefill_iqr_s	kv_gib	nvme_read_s	read_over_prefill	read_plus_h2d_s	verdict
+4096	0.3428	0.0006	0.500	0.0754	0.220	0.0974	PASS
+8192	0.7256	0.0005	1.000	0.1509	0.208	0.1949	PASS
+16384	1.5972	0.0004	2.000	0.3017	0.189	0.3897	PASS
+32768	3.8297	0.0056	4.000	0.6035	0.158	0.7794	PASS

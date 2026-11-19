@@ -1,0 +1,118 @@
+geometry: 4 layers x 2048 tokens, tok_bytes=2048, item=512 KiB, items=64, file=0.03 GiB
+wrote /tmp/kvtest_472200/small.bin: 0.03 GiB in 0.01 s (5.93 GB/s)
+run 1: total 0.0038 s  read 0.0038 s  8.76 GB/s  layer0 0.48 ms  last 3.82 ms  mismatches 0
+median 0.0038 s (8.76 GB/s), IQR [0.0038, 0.0038]
+== small_direct exit 0 17:17:31
+run 1: total 0.0038 s  read 0.0038 s  8.76 GB/s  layer0 0.45 ms  last 3.82 ms  mismatches 0
+median 0.0038 s (8.74 GB/s), IQR [0.0038, 0.0038]
+== small_copy exit 0 17:17:32
+geometry: 80 layers x 32768 tokens, tok_bytes=2048, item=512 KiB, items=20480, file=10.00 GiB
+wrote /tmp/kvtest_472200/kv512k.bin: 10.00 GiB in 0.42 s (25.63 GB/s)
+run 4: total 0.3123 s  read 0.3123 s  34.38 GB/s  layer0 4.38 ms  last 312.32 ms  mismatches 0
+median 0.3127 s (34.34 GB/s), IQR [0.3123, 0.3129]
+== main_t8_q16 exit 0 17:17:36
+run 4: total 0.9504 s  read 0.9504 s  11.30 GB/s  layer0 10.89 ms  last 950.40 ms  mismatches 0
+median 0.9497 s (11.31 GB/s), IQR [0.9491, 0.9501]
+== direct_t1_q4 exit 0 17:17:45
+run 4: total 0.3759 s  read 0.3758 s  28.57 GB/s  layer0 5.32 ms  last 375.84 ms  mismatches 0
+median 0.3764 s (28.53 GB/s), IQR [0.3759, 0.3773]
+== direct_t1_q16 exit 0 17:17:49
+run 4: total 0.3746 s  read 0.3745 s  28.66 GB/s  layer0 5.64 ms  last 374.61 ms  mismatches 0
+median 0.3746 s (28.66 GB/s), IQR [0.3737, 0.3757]
+== direct_t1_q32 exit 0 17:17:53
+run 4: total 0.5874 s  read 0.5874 s  18.28 GB/s  layer0 6.82 ms  last 587.42 ms  mismatches 0
+median 0.5880 s (18.26 GB/s), IQR [0.5879, 0.5882]
+== direct_t2_q4 exit 0 17:17:59
+run 4: total 0.3103 s  read 0.3102 s  34.60 GB/s  layer0 4.36 ms  last 310.33 ms  mismatches 0
+median 0.3103 s (34.60 GB/s), IQR [0.3099, 0.3104]
+== direct_t2_q16 exit 0 17:18:02
+run 4: total 0.3085 s  read 0.3083 s  34.81 GB/s  layer0 4.61 ms  last 308.45 ms  mismatches 0
+median 0.3080 s (34.86 GB/s), IQR [0.3079, 0.3085]
+== direct_t2_q32 exit 0 17:18:06
+run 4: total 0.3227 s  read 0.3226 s  33.27 GB/s  layer0 4.13 ms  last 322.69 ms  mismatches 0
+median 0.3221 s (33.33 GB/s), IQR [0.3217, 0.3222]
+== direct_t4_q4 exit 0 17:18:10
+run 4: total 0.3149 s  read 0.3147 s  34.10 GB/s  layer0 4.45 ms  last 314.87 ms  mismatches 0
+median 0.3151 s (34.08 GB/s), IQR [0.3149, 0.3153]
+== direct_t4_q16 exit 0 17:18:13
+run 4: total 0.3149 s  read 0.3147 s  34.10 GB/s  layer0 4.70 ms  last 314.84 ms  mismatches 0
+median 0.3149 s (34.10 GB/s), IQR [0.3141, 0.3149]
+== direct_t4_q32 exit 0 17:18:17
+run 4: total 0.3116 s  read 0.3114 s  34.46 GB/s  layer0 4.32 ms  last 311.54 ms  mismatches 0
+median 0.3119 s (34.43 GB/s), IQR [0.3116, 0.3122]
+== direct_t8_q4 exit 0 17:18:21
+run 4: total 0.3127 s  read 0.3125 s  34.34 GB/s  layer0 4.53 ms  last 312.65 ms  mismatches 0
+median 0.3126 s (34.35 GB/s), IQR [0.3126, 0.3127]
+== direct_t8_q16 exit 0 17:18:24
+run 4: total 0.3144 s  read 0.3142 s  34.16 GB/s  layer0 4.63 ms  last 314.35 ms  mismatches 0
+median 0.3125 s (34.36 GB/s), IQR [0.3125, 0.3126]
+== direct_t8_q32 exit 0 17:18:28
+run 4: total 0.3101 s  read 0.3099 s  34.63 GB/s  layer0 4.77 ms  last 310.07 ms  mismatches 0
+median 0.3111 s (34.51 GB/s), IQR [0.3101, 0.3112]
+== direct_t11_q4 exit 0 17:18:31
+run 4: total 0.3106 s  read 0.3104 s  34.57 GB/s  layer0 4.70 ms  last 310.58 ms  mismatches 0
+median 0.3115 s (34.48 GB/s), IQR [0.3106, 0.3116]
+== direct_t11_q16 exit 0 17:18:35
+run 4: total 0.3110 s  read 0.3108 s  34.53 GB/s  layer0 4.43 ms  last 310.97 ms  mismatches 0
+median 0.3105 s (34.58 GB/s), IQR [0.3104, 0.3110]
+== direct_t11_q32 exit 0 17:18:39
+run 4: total 3.3973 s  read 3.3972 s  3.16 GB/s  layer0 40.79 ms  last 3397.25 ms  mismatches 0
+median 3.3910 s (3.17 GB/s), IQR [3.3859, 3.3912]
+== direct_t1_q1 exit 0 17:19:07
+run 4: total 0.2409 s  read 0.2408 s  44.57 GB/s  layer0 3.85 ms  last 240.91 ms  mismatches 0
+median 0.2407 s (44.61 GB/s), IQR [0.2394, 0.2408]
+== copy_t4_q16 exit 0 17:19:10
+run 4: total 0.2367 s  read 0.2365 s  45.37 GB/s  layer0 3.87 ms  last 236.67 ms  mismatches 0
+median 0.2367 s (45.37 GB/s), IQR [0.2365, 0.2368]
+== copy_t4_q32 exit 0 17:19:13
+run 4: total 0.2433 s  read 0.2432 s  44.13 GB/s  layer0 3.76 ms  last 243.32 ms  mismatches 0
+median 0.2433 s (44.13 GB/s), IQR [0.2419, 0.2437]
+== copy_t8_q16 exit 0 17:19:16
+run 4: total 0.2358 s  read 0.2357 s  45.53 GB/s  layer0 3.61 ms  last 235.83 ms  mismatches 0
+median 0.2363 s (45.44 GB/s), IQR [0.2361, 0.2366]
+== copy_t8_q32 exit 0 17:19:19
+run 4: total 0.2360 s  read 0.2358 s  45.50 GB/s  layer0 4.10 ms  last 235.98 ms  mismatches 0
+median 0.2358 s (45.53 GB/s), IQR [0.2355, 0.2360]
+== copy_t11_q16 exit 0 17:19:22
+run 4: total 0.2325 s  read 0.2323 s  46.19 GB/s  layer0 3.95 ms  last 232.45 ms  mismatches 0
+median 0.2323 s (46.21 GB/s), IQR [0.2323, 0.2325]
+== copy_t11_q32 exit 0 17:19:25
+run 4: total 0.4422 s  read 0.2092 s  24.28 GB/s  layer0 212.18 ms  last 442.18 ms  mismatches 0
+median 0.4422 s (24.28 GB/s), IQR [0.4422, 0.4427]
+== nooverlap_t8_q16 exit 0 17:19:35
+run 4: total 3.5413 s  read 3.3085 s  3.03 GB/s  layer0 3311.38 ms  last 3541.32 ms  mismatches 0
+median 3.5424 s (3.03 GB/s), IQR [3.5423, 3.5443]
+== lmcachelike_t1_q1 exit 0 17:20:10
+run 4: total 0.3129 s  read 0.3127 s  34.32 GB/s  layer0 4.31 ms  last 312.87 ms  mismatches 0
+median 0.3119 s (34.42 GB/s), IQR [0.3114, 0.3124]
+== numa_none_t8_q16 exit 0 17:20:13
+numa_sched_setaffinity_v2_int() failed: Invalid argument
+sched_setaffinity: Invalid argument
+== numa_other_t8_q16 exit 1 17:20:13
+run 4: total 0.3111 s  read 0.3110 s  34.51 GB/s  layer0 4.26 ms  last 311.11 ms  mismatches 0
+median 0.3108 s (34.55 GB/s), IQR [0.3107, 0.3111]
+== ring64_t8_q16 exit 0 17:20:17
+run 4: total 0.3140 s  read 0.3139 s  34.19 GB/s  layer0 4.22 ms  last 314.03 ms  mismatches 0
+median 0.3137 s (34.23 GB/s), IQR [0.3136, 0.3140]
+== ring128_t8_q16 exit 0 17:20:21
+run 4: total 0.3110 s  read 0.3092 s  34.52 GB/s  layer0 4.55 ms  last 311.02 ms  mismatches 0
+median 0.3113 s (34.49 GB/s), IQR [0.3110, 0.3125]
+== ring512_t8_q16 exit 0 17:20:24
+run 4: total 0.3273 s  read 0.3272 s  32.80 GB/s  layer0 4.52 ms  last 327.34 ms  mismatches 0
+median 0.3273 s (32.80 GB/s), IQR [0.3273, 0.3275]
+== batch4_t8_q16 exit 0 17:20:28
+run 4: total 0.3134 s  read 0.3132 s  34.27 GB/s  layer0 4.38 ms  last 313.35 ms  mismatches 0
+median 0.3134 s (34.26 GB/s), IQR [0.3134, 0.3138]
+== batch16_t8_q16 exit 0 17:20:32
+run 4: total 0.3144 s  read 0.3142 s  34.15 GB/s  layer0 4.41 ms  last 314.41 ms  mismatches 0
+median 0.3136 s (34.24 GB/s), IQR [0.3135, 0.3139]
+== batch64_t8_q16 exit 0 17:20:35
+run 4: total 0.3245 s  read 0.3240 s  33.09 GB/s  layer0 4.61 ms  last 324.47 ms  mismatches 0
+median 0.3236 s (33.18 GB/s), IQR [0.3232, 0.3243]
+== seg256k_t8_q32 exit 0 17:20:40
+run 4: total 0.3127 s  read 0.3126 s  34.34 GB/s  layer0 4.86 ms  last 312.71 ms  mismatches 0
+median 0.3132 s (34.29 GB/s), IQR [0.3127, 0.3146]
+== seg1m_t8_q8 exit 0 17:20:44
+[1/1] [0%                          ] main_t8_q16.nsys-rep[1/1] [0%                          ] main_t8_q16.nsys-rep[1/1] [7%                          ] main_t8_q16.nsys-rep[1/1] [10%                         ] main_t8_q16.nsys-rep[1/1] [8%                          ] main_t8_q16.nsys-rep[1/1] [6%                          ] main_t8_q16.nsys-rep[1/1] [5%                          ] main_t8_q16.nsys-rep[1/1] [0%                          ] main_t8_q16.nsys-rep[1/1] [5%                          ] main_t8_q16.nsys-rep[1/1] [6%                          ] main_t8_q16.nsys-rep[1/1] [8%                          ] main_t8_q16.nsys-rep[1/1] [9%                          ] main_t8_q16.nsys-rep[1/1] [10%                         ] main_t8_q16.nsys-rep[1/1] [11%                         ] main_t8_q16.nsys-rep[1/1] [12%                         ] main_t8_q16.nsys-rep[1/1] [13%                         ] main_t8_q16.nsys-rep[1/1] [14%                         ] main_t8_q16.nsys-rep[1/1] [=15%                        ] main_t8_q16.nsys-rep[1/1] [=16%                        ] main_t8_q16.nsys-rep[1/1] [=17%                        ] main_t8_q16.nsys-rep[1/1] [==18%                       ] main_t8_q16.nsys-rep[1/1] [==19%                       ] main_t8_q16.nsys-rep[1/1] [==21%                       ] main_t8_q16.nsys-rep[1/1] [===22%                      ] main_t8_q16.nsys-rep[1/1] [===23%                      ] main_t8_q16.nsys-rep[1/1] [===24%                      ] main_t8_q16.nsys-rep[1/1] [====25%                     ] main_t8_q16.nsys-rep[1/1] [====26%                     ] main_t8_q16.nsys-rep[1/1] [====27%                     ] main_t8_q16.nsys-rep[1/1] [====28%                     ] main_t8_q16.nsys-rep[1/1] [=====29%                    ] main_t8_q16.nsys-rep[1/1] [=====30%                    ] main_t8_q16.nsys-rep[1/1] [=====31%                    ] main_t8_q16.nsys-rep[1/1] [======33%                   ] main_t8_q16.nsys-rep[1/1] [======34%                   ] main_t8_q16.nsys-rep[1/1] [======35%                   ] main_t8_q16.nsys-rep[1/1] [=======36%                  ] main_t8_q16.nsys-rep[1/1] [=======37%                  ] main_t8_q16.nsys-rep[1/1] [=======38%                  ] main_t8_q16.nsys-rep[1/1] [=======39%                  ] main_t8_q16.nsys-rep[1/1] [========40%                 ] main_t8_q16.nsys-rep[1/1] [========41%                 ] main_t8_q16.nsys-rep[1/1] [========42%                 ] main_t8_q16.nsys-rep[1/1] [=========43%                ] main_t8_q16.nsys-rep[1/1] [=========44%                ] main_t8_q16.nsys-rep[1/1] [=========46%                ] main_t8_q16.nsys-rep[1/1] [==========47%               ] main_t8_q16.nsys-rep[1/1] [==========48%               ] main_t8_q16.nsys-rep[1/1] [==========49%               ] main_t8_q16.nsys-rep[1/1] [===========50%              ] main_t8_q16.nsys-rep[1/1] [===========51%              ] main_t8_q16.nsys-rep[1/1] [===========52%              ] main_t8_q16.nsys-rep[1/1] [===========53%              ] main_t8_q16.nsys-rep[1/1] [============54%             ] main_t8_q16.nsys-rep[1/1] [============55%             ] main_t8_q16.nsys-rep[1/1] [============56%             ] main_t8_q16.nsys-rep[1/1] [============57%             ] main_t8_q16.nsys-rep[1/1] [=============59%            ] main_t8_q16.nsys-rep[1/1] [=============60%            ] main_t8_q16.nsys-rep[1/1] [==============61%           ] main_t8_q16.nsys-rep[1/1] [==============62%           ] main_t8_q16.nsys-rep[1/1] [==============63%           ] main_t8_q16.nsys-rep[1/1] [==============64%           ] main_t8_q16.nsys-rep[1/1] [===============65%          ] main_t8_q16.nsys-rep[1/1] [===============66%          ] main_t8_q16.nsys-rep[1/1] [===============67%          ] main_t8_q16.nsys-rep[1/1] [================68%         ] main_t8_q16.nsys-rep[1/1] [================69%         ] main_t8_q16.nsys-rep[1/1] [================70%         ] main_t8_q16.nsys-rep[1/1] [=================72%        ] main_t8_q16.nsys-rep[1/1] [=================73%        ] main_t8_q16.nsys-rep[1/1] [=================74%        ] main_t8_q16.nsys-rep[1/1] [==================75%       ] main_t8_q16.nsys-rep[1/1] [==================76%       ] main_t8_q16.nsys-rep[1/1] [==================77%       ] main_t8_q16.nsys-rep[1/1] [==================78%       ] main_t8_q16.nsys-rep[1/1] [===================79%      ] main_t8_q16.nsys-rep[1/1] [===================80%      ] main_t8_q16.nsys-rep[1/1] [===================81%      ] main_t8_q16.nsys-rep[1/1] [===================82%      ] main_t8_q16.nsys-rep[1/1] [====================83%     ] main_t8_q16.nsys-rep[1/1] [====================85%     ] main_t8_q16.nsys-rep[1/1] [=====================86%    ] main_t8_q16.nsys-rep[1/1] [=====================87%    ] main_t8_q16.nsys-rep[1/1] [=====================88%    ] main_t8_q16.nsys-rep[1/1] [=====================89%    ] main_t8_q16.nsys-rep[1/1] [======================90%   ] main_t8_q16.nsys-rep[1/1] [======================91%   ] main_t8_q16.nsys-rep[1/1] [======================92%   ] main_t8_q16.nsys-rep[1/1] [=======================93%  ] main_t8_q16.nsys-rep[1/1] [=======================94%  ] main_t8_q16.nsys-rep[1/1] [=======================95%  ] main_t8_q16.nsys-rep[1/1] [=======================96%  ] main_t8_q16.nsys-rep[1/1] [========================98% ] main_t8_q16.nsys-rep[1/1] [========================99% ] main_t8_q16.nsys-rep[1/1] [========================100%] main_t8_q16.nsys-rep[1/1] [========================100%] main_t8_q16.nsys-rep
+Generated:
+    /home/u1444832/harness/results/p1-2026-11-15-472200/main_t8_q16.nsys-rep

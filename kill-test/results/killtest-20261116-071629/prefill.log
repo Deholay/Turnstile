@@ -1,0 +1,18 @@
+Loading weights:   0%|          | 0/291 [00:00<?, ?it/s]Loading weights:   0%|          | 1/291 [00:00<01:16,  3.77it/s]Loading weights:   1%|          | 2/291 [00:00<01:12,  3.98it/s]Loading weights:   4%|▍         | 13/291 [00:00<00:09, 28.94it/s]Loading weights:   8%|▊         | 23/291 [00:00<00:06, 44.40it/s]Loading weights:  11%|█▏        | 33/291 [00:00<00:04, 55.91it/s]Loading weights:  15%|█▌        | 45/291 [00:00<00:03, 70.82it/s]Loading weights:  20%|█▉        | 58/291 [00:01<00:02, 82.64it/s]Loading weights:  23%|██▎       | 68/291 [00:01<00:02, 83.58it/s]Loading weights:  27%|██▋       | 78/291 [00:01<00:02, 84.45it/s]Loading weights:  31%|███       | 90/291 [00:01<00:02, 93.94it/s]Loading weights:  35%|███▍      | 101/291 [00:01<00:01, 98.30it/s]Loading weights:  38%|███▊      | 112/291 [00:01<00:01, 92.43it/s]Loading weights:  42%|████▏     | 122/291 [00:01<00:01, 89.40it/s]Loading weights:  45%|████▌     | 132/291 [00:01<00:01, 85.79it/s]Loading weights:  48%|████▊     | 141/291 [00:02<00:01, 85.45it/s]Loading weights:  52%|█████▏    | 150/291 [00:02<00:01, 81.83it/s]Loading weights:  55%|█████▍    | 159/291 [00:02<00:01, 80.09it/s]Loading weights:  58%|█████▊    | 168/291 [00:02<00:01, 79.57it/s]Loading weights:  61%|██████    | 177/291 [00:02<00:01, 71.65it/s]Loading weights:  64%|██████▎   | 185/291 [00:02<00:01, 71.60it/s]Loading weights:  67%|██████▋   | 194/291 [00:02<00:01, 73.15it/s]Loading weights:  69%|██████▉   | 202/291 [00:02<00:01, 68.95it/s]Loading weights:  73%|███████▎  | 211/291 [00:03<00:01, 69.99it/s]Loading weights:  76%|███████▌  | 220/291 [00:03<00:00, 72.04it/s]Loading weights:  78%|███████▊  | 228/291 [00:03<00:00, 73.60it/s]Loading weights:  81%|████████  | 236/291 [00:03<00:00, 71.64it/s]Loading weights:  84%|████████▍ | 244/291 [00:03<00:00, 70.68it/s]Loading weights:  87%|████████▋ | 252/291 [00:03<00:00, 70.76it/s]Loading weights:  89%|████████▉ | 260/291 [00:03<00:00, 71.31it/s]Loading weights:  92%|█████████▏| 268/291 [00:03<00:00, 71.03it/s]Loading weights:  95%|█████████▍| 276/291 [00:03<00:00, 70.59it/s]Loading weights:  98%|█████████▊| 285/291 [00:04<00:00, 71.78it/s]Loading weights: 100%|██████████| 291/291 [00:04<00:00, 71.54it/s]
+{
+  "model": "/data/personal/r15942056/models/Llama-3.1-8B-Instruct",
+  "dtype": "torch.bfloat16",
+  "attn_implementation": "sdpa",
+  "num_hidden_layers": 32,
+  "num_key_value_heads": 8,
+  "head_dim": 128,
+  "kv_bytes_per_token_formula": 131072,
+  "h2d_pinned_bytes_per_s": 24409715123.741734,
+  "torch": "2.11.0+cu128",
+  "gpu": "NVIDIA GeForce RTX 5090",
+  "seed": 0
+}
+tokens=4096 prefill median=0.3428s kv=0.500 GiB peak=16.42 GiB
+tokens=8192 prefill median=0.7256s kv=1.000 GiB peak=17.88 GiB
+tokens=16384 prefill median=1.5972s kv=2.000 GiB peak=20.79 GiB
+tokens=32768 prefill median=3.8297s kv=4.000 GiB peak=26.61 GiB

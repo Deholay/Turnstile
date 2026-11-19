@@ -1,0 +1,16 @@
+# job 472211 on hgpn44 Sun Nov 15 17:31:32 CST 2026 gpu_numa=0
+NVIDIA H200, 550.127.08
+vllm 0.10.1.1 torch 2.7.1+cu126
+66006e9522d07aaadc709e2965739ee6f1c8cf6a9b2889055fbda3480cce4c7e  /home/u1444832/harness/kvr_core.cuh
+51e9f95d9561c706f245cbd0d9aaae4d522a56abf3b64054d2dee47214477e2a  /home/u1444832/harness/kvr_lib.cu
+eef948f1b377ce9d9767369c92807c5765e557ac1d781f34735ada75cdd75cc5  /home/u1444832/harness/kvr_connector.py
+5b936d777a90929eb4cafebfa40de9e8cafec8dc0e5a754b9c730b22d88b6aa7  /home/u1444832/harness/ttft_kvr.py
+4b56fe45495d17209d3a2acd5e681b3844cda1ed51e36a8f72aed0ee0fcc189d  /home/u1444832/harness/p2_job.sh
+90f865f48f1c6a32e86987ecd185dbc7e2073f1353f93320d7bbae8ad97b0f69  /home/u1444832/harness/libkvr.so
+median 0.0050 s (6.66 GB/s), IQR [0.0050, 0.0050]
+median 0.0050 s (6.67 GB/s), IQR [0.0050, 0.0050]
+numactl --cpunodebind=0 --membind=0 python /home/u1444832/harness/ttft_kvr.py /home/u1444832/harness/results/p2-2026-11-15-472211/ttft_8b.json  # KT_MODEL=/home/u1444832/models/Meta-Llama-3.1-8B-Instruct-FP8-dynamic
+== 8b exit 0 17:34:03
+numactl --cpunodebind=0 --membind=0 python /home/u1444832/harness/ttft_kvr.py /home/u1444832/harness/results/p2-2026-11-15-472211/ttft_70b.json  # KT_MODEL=/work/u1444832/killtest/models/Llama-3.3-70B-Instruct-FP8-dynamic
+== 70b exit 0 17:41:31
+# done Sun Nov 15 17:41:31 CST 2026

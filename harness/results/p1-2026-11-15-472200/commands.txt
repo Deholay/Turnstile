@@ -1,0 +1,50 @@
+# job 472200 on hgpn44 Sun Nov 15 17:17:30 CST 2026 gpu_numa=0
+NVIDIA H200, 550.127.08, 00000000:3A:00.0
+ebdf20cfd7219de38ee96f41a530e5f2f61c112ab7d00ee3fc7897cc1e339a20  /home/u1444832/harness/restore.cu
+704e7148c13f2630dc4d2ec4f2d2c073f94e7aa30aef6ef5ad26957c86b225be  /home/u1444832/harness/p1_job.sh
+fe170b4099bfe38fce3c57d89ac7099a24987dac2996c40ae63d97965008ed4d  /home/u1444832/harness/restore
+/dev/md131       28T  200G   28T   1% /tmp
+numactl --cpunodebind=0 --membind=0 /home/u1444832/harness/restore --file /tmp/kvtest_472200/small.bin --layers 4 --tokens 2048 --runs 2 --warmup 1 --csv /home/u1444832/harness/results/p1-2026-11-15-472200/restore.csv --label small_direct
+numactl --cpunodebind=0 --membind=0 /home/u1444832/harness/restore --file /tmp/kvtest_472200/small.bin --layers 4 --tokens 2048 --runs 2 --warmup 1 --mode copy --csv /home/u1444832/harness/results/p1-2026-11-15-472200/restore.csv --label small_copy
+geometry: 80 layers x 32768 tokens, tok_bytes=2048, item=512 KiB, items=20480, file=10.00 GiB
+wrote /tmp/kvtest_472200/kv512k.bin: 10.00 GiB in 0.42 s (25.63 GB/s)
+numactl --cpunodebind=0 --membind=0 /home/u1444832/harness/restore --file /tmp/kvtest_472200/kv512k.bin --threads 8 --qd 16 --csv /home/u1444832/harness/results/p1-2026-11-15-472200/restore.csv --label main_t8_q16
+numactl --cpunodebind=0 --membind=0 /home/u1444832/harness/restore --file /tmp/kvtest_472200/kv512k.bin --threads 1 --qd 4 --csv /home/u1444832/harness/results/p1-2026-11-15-472200/restore.csv --label direct_t1_q4
+numactl --cpunodebind=0 --membind=0 /home/u1444832/harness/restore --file /tmp/kvtest_472200/kv512k.bin --threads 1 --qd 16 --csv /home/u1444832/harness/results/p1-2026-11-15-472200/restore.csv --label direct_t1_q16
+numactl --cpunodebind=0 --membind=0 /home/u1444832/harness/restore --file /tmp/kvtest_472200/kv512k.bin --threads 1 --qd 32 --csv /home/u1444832/harness/results/p1-2026-11-15-472200/restore.csv --label direct_t1_q32
+numactl --cpunodebind=0 --membind=0 /home/u1444832/harness/restore --file /tmp/kvtest_472200/kv512k.bin --threads 2 --qd 4 --csv /home/u1444832/harness/results/p1-2026-11-15-472200/restore.csv --label direct_t2_q4
+numactl --cpunodebind=0 --membind=0 /home/u1444832/harness/restore --file /tmp/kvtest_472200/kv512k.bin --threads 2 --qd 16 --csv /home/u1444832/harness/results/p1-2026-11-15-472200/restore.csv --label direct_t2_q16
+numactl --cpunodebind=0 --membind=0 /home/u1444832/harness/restore --file /tmp/kvtest_472200/kv512k.bin --threads 2 --qd 32 --csv /home/u1444832/harness/results/p1-2026-11-15-472200/restore.csv --label direct_t2_q32
+numactl --cpunodebind=0 --membind=0 /home/u1444832/harness/restore --file /tmp/kvtest_472200/kv512k.bin --threads 4 --qd 4 --csv /home/u1444832/harness/results/p1-2026-11-15-472200/restore.csv --label direct_t4_q4
+numactl --cpunodebind=0 --membind=0 /home/u1444832/harness/restore --file /tmp/kvtest_472200/kv512k.bin --threads 4 --qd 16 --csv /home/u1444832/harness/results/p1-2026-11-15-472200/restore.csv --label direct_t4_q16
+numactl --cpunodebind=0 --membind=0 /home/u1444832/harness/restore --file /tmp/kvtest_472200/kv512k.bin --threads 4 --qd 32 --csv /home/u1444832/harness/results/p1-2026-11-15-472200/restore.csv --label direct_t4_q32
+numactl --cpunodebind=0 --membind=0 /home/u1444832/harness/restore --file /tmp/kvtest_472200/kv512k.bin --threads 8 --qd 4 --csv /home/u1444832/harness/results/p1-2026-11-15-472200/restore.csv --label direct_t8_q4
+numactl --cpunodebind=0 --membind=0 /home/u1444832/harness/restore --file /tmp/kvtest_472200/kv512k.bin --threads 8 --qd 16 --csv /home/u1444832/harness/results/p1-2026-11-15-472200/restore.csv --label direct_t8_q16
+numactl --cpunodebind=0 --membind=0 /home/u1444832/harness/restore --file /tmp/kvtest_472200/kv512k.bin --threads 8 --qd 32 --csv /home/u1444832/harness/results/p1-2026-11-15-472200/restore.csv --label direct_t8_q32
+numactl --cpunodebind=0 --membind=0 /home/u1444832/harness/restore --file /tmp/kvtest_472200/kv512k.bin --threads 11 --qd 4 --csv /home/u1444832/harness/results/p1-2026-11-15-472200/restore.csv --label direct_t11_q4
+numactl --cpunodebind=0 --membind=0 /home/u1444832/harness/restore --file /tmp/kvtest_472200/kv512k.bin --threads 11 --qd 16 --csv /home/u1444832/harness/results/p1-2026-11-15-472200/restore.csv --label direct_t11_q16
+numactl --cpunodebind=0 --membind=0 /home/u1444832/harness/restore --file /tmp/kvtest_472200/kv512k.bin --threads 11 --qd 32 --csv /home/u1444832/harness/results/p1-2026-11-15-472200/restore.csv --label direct_t11_q32
+numactl --cpunodebind=0 --membind=0 /home/u1444832/harness/restore --file /tmp/kvtest_472200/kv512k.bin --threads 1 --qd 1 --csv /home/u1444832/harness/results/p1-2026-11-15-472200/restore.csv --label direct_t1_q1
+numactl --cpunodebind=0 --membind=0 /home/u1444832/harness/restore --file /tmp/kvtest_472200/kv512k.bin --threads 4 --qd 16 --mode copy --csv /home/u1444832/harness/results/p1-2026-11-15-472200/restore.csv --label copy_t4_q16
+numactl --cpunodebind=0 --membind=0 /home/u1444832/harness/restore --file /tmp/kvtest_472200/kv512k.bin --threads 4 --qd 32 --mode copy --csv /home/u1444832/harness/results/p1-2026-11-15-472200/restore.csv --label copy_t4_q32
+numactl --cpunodebind=0 --membind=0 /home/u1444832/harness/restore --file /tmp/kvtest_472200/kv512k.bin --threads 8 --qd 16 --mode copy --csv /home/u1444832/harness/results/p1-2026-11-15-472200/restore.csv --label copy_t8_q16
+numactl --cpunodebind=0 --membind=0 /home/u1444832/harness/restore --file /tmp/kvtest_472200/kv512k.bin --threads 8 --qd 32 --mode copy --csv /home/u1444832/harness/results/p1-2026-11-15-472200/restore.csv --label copy_t8_q32
+numactl --cpunodebind=0 --membind=0 /home/u1444832/harness/restore --file /tmp/kvtest_472200/kv512k.bin --threads 11 --qd 16 --mode copy --csv /home/u1444832/harness/results/p1-2026-11-15-472200/restore.csv --label copy_t11_q16
+numactl --cpunodebind=0 --membind=0 /home/u1444832/harness/restore --file /tmp/kvtest_472200/kv512k.bin --threads 11 --qd 32 --mode copy --csv /home/u1444832/harness/results/p1-2026-11-15-472200/restore.csv --label copy_t11_q32
+numactl --cpunodebind=0 --membind=0 /home/u1444832/harness/restore --file /tmp/kvtest_472200/kv512k.bin --threads 8 --qd 16 --no-overlap --csv /home/u1444832/harness/results/p1-2026-11-15-472200/restore.csv --label nooverlap_t8_q16
+numactl --cpunodebind=0 --membind=0 /home/u1444832/harness/restore --file /tmp/kvtest_472200/kv512k.bin --threads 1 --qd 1 --no-overlap --csv /home/u1444832/harness/results/p1-2026-11-15-472200/restore.csv --label lmcachelike_t1_q1
+ /home/u1444832/harness/restore --file /tmp/kvtest_472200/kv512k.bin --threads 8 --qd 16 --csv /home/u1444832/harness/results/p1-2026-11-15-472200/restore.csv --label numa_none_t8_q16
+numactl --cpunodebind=1 --membind=1 /home/u1444832/harness/restore --file /tmp/kvtest_472200/kv512k.bin --threads 8 --qd 16 --csv /home/u1444832/harness/results/p1-2026-11-15-472200/restore.csv --label numa_other_t8_q16
+numactl --cpunodebind=0 --membind=0 /home/u1444832/harness/restore --file /tmp/kvtest_472200/kv512k.bin --threads 8 --qd 16 --ring 64 --csv /home/u1444832/harness/results/p1-2026-11-15-472200/restore.csv --label ring64_t8_q16
+numactl --cpunodebind=0 --membind=0 /home/u1444832/harness/restore --file /tmp/kvtest_472200/kv512k.bin --threads 8 --qd 16 --ring 128 --csv /home/u1444832/harness/results/p1-2026-11-15-472200/restore.csv --label ring128_t8_q16
+numactl --cpunodebind=0 --membind=0 /home/u1444832/harness/restore --file /tmp/kvtest_472200/kv512k.bin --threads 8 --qd 16 --ring 512 --csv /home/u1444832/harness/results/p1-2026-11-15-472200/restore.csv --label ring512_t8_q16
+numactl --cpunodebind=0 --membind=0 /home/u1444832/harness/restore --file /tmp/kvtest_472200/kv512k.bin --threads 8 --qd 16 --batch 4 --csv /home/u1444832/harness/results/p1-2026-11-15-472200/restore.csv --label batch4_t8_q16
+numactl --cpunodebind=0 --membind=0 /home/u1444832/harness/restore --file /tmp/kvtest_472200/kv512k.bin --threads 8 --qd 16 --batch 16 --csv /home/u1444832/harness/results/p1-2026-11-15-472200/restore.csv --label batch16_t8_q16
+numactl --cpunodebind=0 --membind=0 /home/u1444832/harness/restore --file /tmp/kvtest_472200/kv512k.bin --threads 8 --qd 16 --batch 64 --csv /home/u1444832/harness/results/p1-2026-11-15-472200/restore.csv --label batch64_t8_q16
+geometry: 80 layers x 32768 tokens, tok_bytes=2048, item=256 KiB, items=40960, file=10.00 GiB
+wrote /tmp/kvtest_472200/kv256k.bin: 10.00 GiB in 0.74 s (14.49 GB/s)
+numactl --cpunodebind=0 --membind=0 /home/u1444832/harness/restore --file /tmp/kvtest_472200/kv256k.bin --seg-tokens 64 --threads 8 --qd 32 --ring 512 --csv /home/u1444832/harness/results/p1-2026-11-15-472200/restore.csv --label seg256k_t8_q32
+geometry: 80 layers x 32768 tokens, tok_bytes=2048, item=1024 KiB, items=10240, file=10.00 GiB
+wrote /tmp/kvtest_472200/kv1m.bin: 10.00 GiB in 0.34 s (31.25 GB/s)
+numactl --cpunodebind=0 --membind=0 /home/u1444832/harness/restore --file /tmp/kvtest_472200/kv1m.bin --seg-tokens 256 --threads 8 --qd 8 --ring 128 --csv /home/u1444832/harness/results/p1-2026-11-15-472200/restore.csv --label seg1m_t8_q8
+# done Sun Nov 15 17:20:55 CST 2026
