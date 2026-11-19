@@ -1,0 +1,29 @@
+# job 481677 on hgpn44 Thu Nov 19 13:10:07 CST 2026 gpu_numa=0
+0, NVIDIA H200, 550.127.08, 143771 MiB, 00000000:3A:00.0
+kt2 vllm 0.10.1.1 torch 2.7.1+cu126 transformers 4.55.4
+kt4 vllm 0.32.0 torch 2.13.0+cu129 12.9 transformers 5.19.0
+66006e9522d07aaadc709e2965739ee6f1c8cf6a9b2889055fbda3480cce4c7e  /home/u1444832/harness/kvr_core.cuh
+51e9f95d9561c706f245cbd0d9aaae4d522a56abf3b64054d2dee47214477e2a  /home/u1444832/harness/kvr_lib.cu
+b5e2c492e8d3669df83147f30eb7afcd7ee19280fd7d04083721fdd7a1e09ee2  /home/u1444832/harness/restore.cu
+eef948f1b377ce9d9767369c92807c5765e557ac1d781f34735ada75cdd75cc5  /home/u1444832/harness/kvr_connector.py
+67021f5f46799346271dc23d56593d24a1a8517281822e6ea3ee1f7e2bd49717  /home/u1444832/harness/restore
+90f865f48f1c6a32e86987ecd185dbc7e2073f1353f93320d7bbae8ad97b0f69  /home/u1444832/harness/libkvr.so
+022aa2730bf1ea462a8fd51d4cc520be905faf4503e51fc9e5362d65a29cf43c  /home/u1444832/p4/check_greedy.py
+3a009ba28b59e3c694073a146863d61bb3f615611eca116320cfbe3178d0a55a  /home/u1444832/p4/disk_tier_ttft.py
+185ac58f1e53565e0216ada22dbd8a76738ea90076015bcd50a52212cb4eb02e  /home/u1444832/p4/iotrace.py
+c85f0b6d26d0a28f31609ad7c087ddbfe3050752d2c6eaad35aae71c1c1b87dd  /home/u1444832/p4/prefill_vllm.py
+d28a98959c332c6aaf1f7455cb387015e7371cd8e0050a3e14b5fdbe4a5dd738  /home/u1444832/p4/p4_job.sh
+/dev/md131 xfs    rw,relatime,attr2,inode64,logbufs=8,logbsize=32k,sunit=1024,swidth=8192,noquota
+/dev/md131       28T  200G   28T   1% /tmp
+== A_disk_tier 13:10:16
+== A_disk_tier exit 124 13:22:17
+== B_greedy70 13:22:17
+== B_greedy70 exit 0 13:25:13
+CHECK {"prompt": 0, "pc_cached_tokens": 32768, "kvr_loaded_tokens": 32768, "kv_checksum_ok": true, "equal_prefix_cache": true, "first_diff_prefix_cache": null, "equal_full_recompute": false, "first_diff_full_recompute": 19}
+CHECK {"prompt": 1, "pc_cached_tokens": 32768, "kvr_loaded_tokens": 32768, "kv_checksum_ok": true, "equal_prefix_cache": true, "first_diff_prefix_cache": null, "equal_full_recompute": true, "first_diff_full_recompute": null}
+CHECK {"prompt": 2, "pc_cached_tokens": 32768, "kvr_loaded_tokens": 32768, "kv_checksum_ok": true, "equal_prefix_cache": true, "first_diff_prefix_cache": null, "equal_full_recompute": true, "first_diff_full_recompute": null}
+RESULT PASS
+== C2_prefill_long 13:25:13
+== C2_prefill_long exit 0 13:28:50
+== end 13:28:50
+# done Thu Nov 19 13:28:50 CST 2026

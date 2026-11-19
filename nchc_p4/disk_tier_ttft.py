@@ -32,6 +32,10 @@ ap.add_argument("--runs", type=int, default=4)
 ap.add_argument("--disk-gib", type=int, default=72)
 ap.add_argument("--settle", type=float, default=30.0)
 ap.add_argument("--gpu-util", type=float, default=0.92)
+# Debug (job 481677 segfaulted in the engine after the first store): buffered I/O instead of
+# O_DIRECT, to see whether the O_DIRECT write path is the cause. Loads may then come from the
+# page cache, so such a run is not a disk-tier measurement.
+ap.add_argument("--page-cache", action="store_true")
 a = ap.parse_args()
 
 from vllm import LLM, SamplingParams  # noqa: E402
@@ -39,7 +43,7 @@ from vllm.config import KVTransferConfig  # noqa: E402
 from vllm.inputs import TokensPrompt  # noqa: E402
 
 extra = dict(kv_offload_backend="disk", disk_path=os.path.join(a.root, "kv"),
-             disk_capacity_bytes=a.disk_gib << 30)
+             disk_capacity_bytes=a.disk_gib << 30, use_page_cache=a.page_cache)
 t = time.perf_counter()
 llm = LLM(model=a.model, max_model_len=a.hist + a.new + 256,
           max_num_batched_tokens=a.hist + a.new + 256,

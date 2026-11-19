@@ -12,3 +12,5 @@ ppopp-template/*.fdb_latexmk
 ppopp-template/*.out
 ppopp-template/*.bbl
 ppopp-template/*.blg
+# Raw /proc/diskstats samples of the P4 jobs (~40 MB); kept locally and on NCHC
+nchc_p4/results/*/diskstats.csv

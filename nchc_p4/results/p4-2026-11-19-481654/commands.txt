@@ -1,0 +1,52 @@
+# job 481654 on hgpn44 Thu Nov 19 12:52:49 CST 2026 gpu_numa=0
+0, NVIDIA H200, 550.127.08, 143771 MiB, 00000000:3A:00.0
+kt2 vllm 0.10.1.1 torch 2.7.1+cu126 transformers 4.55.4
+kt4 vllm 0.32.0 torch 2.13.0+cu129 12.9 transformers 5.19.0
+66006e9522d07aaadc709e2965739ee6f1c8cf6a9b2889055fbda3480cce4c7e  /home/u1444832/harness/kvr_core.cuh
+51e9f95d9561c706f245cbd0d9aaae4d522a56abf3b64054d2dee47214477e2a  /home/u1444832/harness/kvr_lib.cu
+b5e2c492e8d3669df83147f30eb7afcd7ee19280fd7d04083721fdd7a1e09ee2  /home/u1444832/harness/restore.cu
+eef948f1b377ce9d9767369c92807c5765e557ac1d781f34735ada75cdd75cc5  /home/u1444832/harness/kvr_connector.py
+67021f5f46799346271dc23d56593d24a1a8517281822e6ea3ee1f7e2bd49717  /home/u1444832/harness/restore
+90f865f48f1c6a32e86987ecd185dbc7e2073f1353f93320d7bbae8ad97b0f69  /home/u1444832/harness/libkvr.so
+e15c831a92dba7f6e6a5dcdce80a448660981279022f0be76692f26c34d55d21  /home/u1444832/p4/check_greedy.py
+3a009ba28b59e3c694073a146863d61bb3f615611eca116320cfbe3178d0a55a  /home/u1444832/p4/disk_tier_ttft.py
+185ac58f1e53565e0216ada22dbd8a76738ea90076015bcd50a52212cb4eb02e  /home/u1444832/p4/iotrace.py
+6a3ae24360d53a142b946b4637cafe3fe7b353e6fb908b7ba902412594c8ba16  /home/u1444832/p4/prefill_vllm.py
+fefcb61501f66055223e0b2342c6ddc9a667bcdd9fdb5aa8b440a6b6b10ed18a  /home/u1444832/p4/p4_job.sh
+/dev/md131 xfs    rw,relatime,attr2,inode64,logbufs=8,logbsize=32k,sunit=1024,swidth=8192,noquota
+/dev/md131       28T  200G   28T   1% /tmp
+== A_disk_tier 12:53:02
+== A_disk_tier exit 1 12:55:13
+    raise RuntimeError(
+RuntimeError: Could not find nvcc and default cuda_home='/usr/local/cuda' doesn't exist
+Traceback (most recent call last):
+    raise RuntimeError(
+RuntimeError: Engine core initialization failed. See root cause above. Failed core proc(s): {}
+== B_greedy70 12:55:13
+== B_greedy70 exit 1 12:58:34
+Traceback (most recent call last):
+AssertionError: reset_prefix_cache failed (blocks still in use?)
+== C1_restore_sweep 12:58:34
+geometry: 32 layers x 4096 tokens, tok_bytes=2048, item=512 KiB, items=1024, file=0.50 GiB
+wrote /tmp/p4_481654/h8b_4096.bin: 0.50 GiB in 0.03 s (15.94 GB/s)
+median 0.0117 s (45.93 GB/s), IQR [0.0117, 0.0117]
+geometry: 32 layers x 8192 tokens, tok_bytes=2048, item=512 KiB, items=2048, file=1.00 GiB
+wrote /tmp/p4_481654/h8b_8192.bin: 1.00 GiB in 0.05 s (23.73 GB/s)
+median 0.0262 s (41.05 GB/s), IQR [0.0261, 0.0264]
+geometry: 32 layers x 16384 tokens, tok_bytes=2048, item=512 KiB, items=4096, file=2.00 GiB
+wrote /tmp/p4_481654/h8b_16384.bin: 2.00 GiB in 0.09 s (25.08 GB/s)
+median 0.0443 s (48.46 GB/s), IQR [0.0443, 0.0446]
+geometry: 32 layers x 32768 tokens, tok_bytes=2048, item=512 KiB, items=8192, file=4.00 GiB
+wrote /tmp/p4_481654/h8b_32768.bin: 4.00 GiB in 0.17 s (25.68 GB/s)
+median 0.0907 s (47.34 GB/s), IQR [0.0906, 0.0909]
+geometry: 32 layers x 65536 tokens, tok_bytes=2048, item=512 KiB, items=16384, file=8.00 GiB
+wrote /tmp/p4_481654/h8b_65536.bin: 8.00 GiB in 0.34 s (25.32 GB/s)
+median 0.1775 s (48.41 GB/s), IQR [0.1774, 0.1776]
+geometry: 32 layers x 131072 tokens, tok_bytes=2048, item=512 KiB, items=32768, file=16.00 GiB
+wrote /tmp/p4_481654/h8b_131072.bin: 16.00 GiB in 0.67 s (25.81 GB/s)
+median 0.3514 s (48.89 GB/s), IQR [0.3513, 0.3517]
+== C1_restore_sweep exit 0 12:58:46
+== C2_prefill_long 12:58:46
+== C2_prefill_long exit 1 12:59:58
+== end 12:59:58
+# done Thu Nov 19 12:59:58 CST 2026
