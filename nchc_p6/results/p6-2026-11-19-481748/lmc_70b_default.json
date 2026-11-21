@@ -1,0 +1,51 @@
+{
+ "rows": [
+  {
+   "iter": 0,
+   "warmup": true,
+   "mode": "lmcache",
+   "ttft_s": 3.3425508216023445,
+   "store_req_s": 7.220707882195711,
+   "disk_bytes": 10737418240,
+   "files_dropped": 128
+  },
+  {
+   "iter": 1,
+   "warmup": true,
+   "mode": "lmcache",
+   "ttft_s": 3.340408008545637,
+   "store_req_s": 7.2393816486001015,
+   "disk_bytes": 10737418240,
+   "files_dropped": 128
+  },
+  {
+   "iter": 2,
+   "warmup": false,
+   "mode": "lmcache",
+   "ttft_s": 3.3362977281212807,
+   "store_req_s": 7.224642388522625,
+   "disk_bytes": 10737418240,
+   "files_dropped": 128
+  },
+  {
+   "iter": 3,
+   "warmup": false,
+   "mode": "lmcache",
+   "ttft_s": 3.3373050577938557,
+   "store_req_s": 7.20456849783659,
+   "disk_bytes": 10737418240,
+   "files_dropped": 128
+  },
+  {
+   "iter": 4,
+   "warmup": false,
+   "mode": "lmcache",
+   "ttft_s": 3.3370674401521683,
+   "store_req_s": 7.208579428493977,
+   "disk_bytes": 10737418240,
+   "files_dropped": 128
+  }
+ ],
+ "median": 3.3370674401521683,
+ "iqr": 0.001007329672574997
+}

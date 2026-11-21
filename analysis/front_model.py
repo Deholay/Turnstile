@@ -1,7 +1,8 @@
 """Bandwidth model: restore policies for G concurrent 32k restores on one shared SSD array.
 
 Inputs are H200 measurements (PLAN.zh-TW.md): B = 54.2 GB/s, 8B prefill t(n) at 0/4k/8k/16k/32k,
-linear interpolation in between. 70B t(n) ASSUMES the 8B shape scaled to the measured 7.01 s at 32k.
+linear interpolation in between. 70B t(n) is the measured prefill time of the 8-GPU node (stage 30,
+out/30_prefill/prefill.csv, median of 5 runs) at 1k..32k.
 Simultaneous arrivals only. Run: python3 analysis/front_model.py
 """
 import numpy as np
@@ -10,7 +11,9 @@ pts=np.array([0,4096,8192,16384,32768]); t8=np.array([0,0.067,0.150,0.370,0.996]
 def mk(scale, tok_bytes):
     t=lambda n: np.interp(n,pts,t8*scale)
     return t, tok_bytes
-models={'8B':mk(1.0,131072),'70B (t shape from 8B, scaled to 7.01s)':mk(7.01/0.996,327680)}
+p70=np.array([0,1024,2048,4096,6144,8192,12288,16384,20480,24576,28672,32768])
+t70=np.array([0,0.133,0.264,0.550,0.873,1.221,1.932,2.894,3.785,4.742,5.848,7.015])
+models={'8B':mk(1.0,131072),'70B':(lambda n: np.interp(n,p70,t70),327680)}
 ks=np.arange(0,N+1,seg)
 for name,(t,s) in models.items():
     S=N*s; tN=t(N)

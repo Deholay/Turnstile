@@ -1,0 +1,69 @@
+{
+ "model": "/work/u1444832/killtest/models/Llama-3.3-70B-Instruct-FP8-dynamic",
+ "rows": [
+  {
+   "iter": 0,
+   "warmup": true,
+   "store_req_s": 16.522464476525784,
+   "ttft_kvr_s": 0.31457671895623207,
+   "ttft_recompute_s": 7.251732014119625,
+   "load_wall_s": 0.2530084326863289,
+   "pipe_s": 0.20972314849495888,
+   "read_s": 0.20968185737729073,
+   "tokens": 32768
+  },
+  {
+   "iter": 1,
+   "warmup": true,
+   "store_req_s": 16.543371237814426,
+   "ttft_kvr_s": 0.3069867268204689,
+   "ttft_recompute_s": 7.233040284365416,
+   "load_wall_s": 0.2480977363884449,
+   "pipe_s": 0.20802421867847443,
+   "read_s": 0.20791123062372208,
+   "tokens": 32768
+  },
+  {
+   "iter": 2,
+   "warmup": false,
+   "store_req_s": 16.492971513420343,
+   "ttft_kvr_s": 0.3032034710049629,
+   "ttft_recompute_s": 7.243742294609547,
+   "load_wall_s": 0.24367965385317802,
+   "pipe_s": 0.20971262082457542,
+   "read_s": 0.2096407376229763,
+   "tokens": 32768
+  },
+  {
+   "iter": 3,
+   "warmup": false,
+   "store_req_s": 16.502854205667973,
+   "ttft_kvr_s": 0.3136541321873665,
+   "ttft_recompute_s": 7.228143084794283,
+   "load_wall_s": 0.25290581583976746,
+   "pipe_s": 0.2085266038775444,
+   "read_s": 0.20848366245627403,
+   "tokens": 32768
+  },
+  {
+   "iter": 4,
+   "warmup": false,
+   "store_req_s": 16.56753660738468,
+   "ttft_kvr_s": 0.3058326691389084,
+   "ttft_recompute_s": 7.241987004876137,
+   "load_wall_s": 0.24732942506670952,
+   "pipe_s": 0.2082846388220787,
+   "read_s": 0.20824909210205078,
+   "tokens": 32768
+  }
+ ],
+ "checks": [],
+ "median": {
+  "ttft_kvr_s": 0.3058326691389084,
+  "ttft_recompute_s": 7.241987004876137,
+  "load_wall_s": 0.24732942506670952,
+  "pipe_s": 0.2085266038775444,
+  "read_s": 0.20848366245627403,
+  "ttft_kvr_iqr": 0.010450661182403564
+ }
+}

@@ -1,0 +1,26 @@
+# job 481829 on hgpn44 Thu Nov 19 14:32:37 CST 2026 gpu_numa=1
+NVIDIA H200, 550.127.08
+83899f533ca5bca146e3ddf5642b97d057a424be485cb440c2cbf1d34d43e0e1  /home/u1444832/p7_front/kvr_core.cuh
+1e23c6d87c1deccd2916a50ffe79717e07b77409ee930c84b42aa62433671abe  /home/u1444832/p7_front/kvr_lib.cu
+6dc86d1619d8fea1f75bc3d0950e0ed8789808506df6454f9a34d99d7c1ed2e5  /home/u1444832/p7_front/restore.cu
+22d422fc261a1f877d7a1f3c6b8abd9e2a6014badb9b1a7ac679348b88e2391a  /home/u1444832/p7_front/kvr_coord.h
+d3480bca63963100ba409dd396b7cc934901d8a6bf5eb487a8a46fea8e059ed9  /home/u1444832/p7_front/check_front.py
+35c254a4c58cc0701df60022f72bc4feac2b6cd10804daacd6784c6fd3c5214a  /home/u1444832/p7_front/kvr_connector.py
+2ff3cfa0b4a300c48522e8a121cf317ae5bd3e84fdf1c8ba8642e069dd6cb5ce  /home/u1444832/p7_front/restore
+09ca03443f3194831e048f5cc4c91beb1f78aebcb78e25d41f4601f4a488a216  /home/u1444832/p7_front/libkvr.so
+85f23af67e588502e57194447d0fa2b1370df480d9ecbbcd77202239e31dd995  /home/u1444832/p7_front/p7_job.sh
+== A_partial 14:32:37
+median 0.0152 s (35.23 GB/s), IQR [0.0152, 0.0152]
+median 0.0121 s (33.31 GB/s), IQR [0.0121, 0.0121]
+== B_check_front 14:32:39
+== B_check_front exit 0 14:34:36
+CHECK {"prompt": 0, "k": 0, "num_cached_tokens": 32768, "loads": 1, "load_start": 0, "loaded_tokens": 32768, "load_blocks": 2048, "verify_ok": true, "prefix_seg_mismatch": null, "prefix_seg_total": null, "suffix_ok": true, "timing_ok": true, "equal_prefix_cache": true, "first_diff": null, "t_req1_s": null, "t_req2_s": 0.1607350530102849, "load_wall_s": 0.14146429719403386, "load_pipe_s": 0.10359402908943594, "t_ref1_s": 0.013498852029442787, "req2_overhead_s": 0.005771903786808252}
+CHECK {"prompt": 0, "k": 8192, "num_cached_tokens": 32768, "loads": 1, "load_start": 8192, "loaded_tokens": 24576, "load_blocks": 1536, "verify_ok": true, "prefix_seg_mismatch": 0, "prefix_seg_total": 2048, "suffix_ok": true, "timing_ok": true, "equal_prefix_cache": true, "first_diff": null, "t_req1_s": 0.1444519788492471, "t_req2_s": 0.1368650901131332, "load_wall_s": 0.11672648601233959, "load_pipe_s": 0.07892472809180617, "t_ref1_s": 0.013498852029442787, "req2_overhead_s": 0.006639752071350813}
+CHECK {"prompt": 0, "k": 16384, "num_cached_tokens": 32768, "loads": 1, "load_start": 16384, "loaded_tokens": 16384, "load_blocks": 1024, "verify_ok": true, "prefix_seg_mismatch": 0, "prefix_seg_total": 4096, "suffix_ok": true, "timing_ok": true, "equal_prefix_cache": true, "first_diff": null, "t_req1_s": 0.3658496499992907, "t_req2_s": 0.11162185296416283, "load_wall_s": 0.09253258490934968, "load_pipe_s": 0.054281871067360044, "t_ref1_s": 0.013498852029442787, "req2_overhead_s": 0.005590416025370359}
+CHECK {"prompt": 0, "k": 24576, "num_cached_tokens": 32768, "loads": 1, "load_start": 24576, "loaded_tokens": 8192, "load_blocks": 512, "verify_ok": true, "prefix_seg_mismatch": 0, "prefix_seg_total": 6144, "suffix_ok": true, "timing_ok": true, "equal_prefix_cache": true, "first_diff": null, "t_req1_s": 0.6421315160114318, "t_req2_s": 0.08702829317189753, "load_wall_s": 0.06619444186799228, "load_pipe_s": 0.028952654916793108, "t_ref1_s": 0.013498852029442787, "req2_overhead_s": 0.0073349992744624615}
+CHECK {"prompt": 1, "k": 0, "num_cached_tokens": 32768, "loads": 1, "load_start": 0, "loaded_tokens": 32768, "load_blocks": 2048, "verify_ok": true, "prefix_seg_mismatch": null, "prefix_seg_total": null, "suffix_ok": true, "timing_ok": true, "equal_prefix_cache": true, "first_diff": null, "t_req1_s": null, "t_req2_s": 0.15569289703853428, "load_wall_s": 0.13614136981777847, "load_pipe_s": 0.10157004790380597, "t_ref1_s": 0.013593943091109395, "req2_overhead_s": 0.0059575841296464205}
+CHECK {"prompt": 1, "k": 8192, "num_cached_tokens": 32768, "loads": 1, "load_start": 8192, "loaded_tokens": 24576, "load_blocks": 1536, "verify_ok": true, "prefix_seg_mismatch": 0, "prefix_seg_total": 2048, "suffix_ok": true, "timing_ok": true, "equal_prefix_cache": true, "first_diff": null, "t_req1_s": 0.1424185719806701, "t_req2_s": 0.13761374983005226, "load_wall_s": 0.11732069891877472, "load_pipe_s": 0.0769545768853277, "t_ref1_s": 0.013593943091109395, "req2_overhead_s": 0.0066991078201681376}
+CHECK {"prompt": 1, "k": 16384, "num_cached_tokens": 32768, "loads": 1, "load_start": 16384, "loaded_tokens": 16384, "load_blocks": 1024, "verify_ok": true, "prefix_seg_mismatch": 0, "prefix_seg_total": 4096, "suffix_ok": true, "timing_ok": true, "equal_prefix_cache": true, "first_diff": null, "t_req1_s": 0.36473362310789526, "t_req2_s": 0.10635942500084639, "load_wall_s": 0.0860909370239824, "load_pipe_s": 0.05246837018057704, "t_ref1_s": 0.013593943091109395, "req2_overhead_s": 0.006674544885754585}
+CHECK {"prompt": 1, "k": 24576, "num_cached_tokens": 32768, "loads": 1, "load_start": 24576, "loaded_tokens": 8192, "load_blocks": 512, "verify_ok": true, "prefix_seg_mismatch": 0, "prefix_seg_total": 6144, "suffix_ok": true, "timing_ok": true, "equal_prefix_cache": true, "first_diff": null, "t_req1_s": 0.6471048898529261, "t_req2_s": 0.08541386993601918, "load_wall_s": 0.06316885608248413, "load_pipe_s": 0.027840825030580163, "t_ref1_s": 0.013593943091109395, "req2_overhead_s": 0.008651070762425661}
+RESULT PASS
+# done Thu Nov 19 14:34:36 CST 2026

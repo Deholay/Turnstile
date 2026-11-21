@@ -1,0 +1,36 @@
+# job 481748 on hgpn39 Thu Nov 19 13:49:01 CST 2026 gpu_numa=1
+NVIDIA H200, 550.127.08
+kt3 vllm 0.10.1.1 lmcache ?
+66006e9522d07aaadc709e2965739ee6f1c8cf6a9b2889055fbda3480cce4c7e  /home/u1444832/harness/kvr_core.cuh
+51e9f95d9561c706f245cbd0d9aaae4d522a56abf3b64054d2dee47214477e2a  /home/u1444832/harness/kvr_lib.cu
+eef948f1b377ce9d9767369c92807c5765e557ac1d781f34735ada75cdd75cc5  /home/u1444832/harness/kvr_connector.py
+90f865f48f1c6a32e86987ecd185dbc7e2073f1353f93320d7bbae8ad97b0f69  /home/u1444832/harness/libkvr.so
+6211578d63ec7ba8933a63e0b5906421686dcb036ab7428b080e5375d59a52c0  /home/u1444832/p6/lmc_ttft.py
+22446261d5d0c36363a3e5c4aa665a9f5b73db19d85d99ea5acd42bfcbf95a8c  /home/u1444832/p6/ttft_kvr.py
+d7ccc53934432616d07014c7851d741c03578e4f5a3f7a064c6436c92b712740  /home/u1444832/p6/p6_job.sh
+/dev/md131 xfs
+== ours_8b start 13:49:03
+== ours_8b exit 0 13:50:19
+MEDIAN {"ttft_kvr_s": 0.15112897008657455, "ttft_recompute_s": 0.9493950121104717, "load_wall_s": 0.13149503991007805, "pipe_s": 0.08523127064108849, "read_s": 0.08518030121922493, "ttft_kvr_iqr": 0.014558210968971252}
+== lmc_8b_odirect start 13:50:19
+== lmc_8b_odirect exit 0 13:52:28
+MEDIAN lmcache 0.29169442877173424 IQR 0.00213584303855896
+== lmc_8b_dram start 13:52:28
+== lmc_8b_dram exit 0 13:53:56
+MEDIAN lmcache 0.11701743677258492 IQR 0.31587838008999825
+== lmc_8b_default start 13:53:56
+== lmc_8b_default exit 0 13:55:31
+MEDIAN lmcache 1.349299855530262 IQR 0.000762447714805603
+== ours_70b start 13:55:31
+== ours_70b exit 0 13:59:02
+MEDIAN {"ttft_kvr_s": 0.3058326691389084, "ttft_recompute_s": 7.241987004876137, "load_wall_s": 0.24732942506670952, "pipe_s": 0.2085266038775444, "read_s": 0.20848366245627403, "ttft_kvr_iqr": 0.010450661182403564}
+== lmc_70b_odirect start 13:59:02
+== lmc_70b_odirect exit 0 14:01:49
+MEDIAN lmcache 0.6541352644562721 IQR 0.010353419929742813
+== lmc_70b_dram start 14:01:49
+== lmc_70b_dram exit 0 14:04:41
+MEDIAN lmcache 0.2775970362126827 IQR 0.00036427006125450134
+== lmc_70b_default start 14:04:41
+== lmc_70b_default exit 0 14:07:50
+MEDIAN lmcache 3.3370674401521683 IQR 0.001007329672574997
+# done Thu Nov 19 14:07:50 CST 2026
