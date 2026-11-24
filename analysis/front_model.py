@@ -1,6 +1,6 @@
 """Bandwidth model: restore policies for G concurrent 32k restores on one shared SSD array.
 
-Inputs are H200 measurements (PLAN.zh-TW.md): B = 54.2 GB/s, 8B prefill t(n) at 0/4k/8k/16k/32k,
+Inputs are H200 measurements (fio on the node-local array; 8B prefill from job 472017): B = 54.2 GB/s, 8B prefill t(n) at 0/4k/8k/16k/32k,
 linear interpolation in between. 70B t(n) is the measured prefill time of the 8-GPU node (stage 30,
 bundle_8gpu/results/8gpu-2026-11-20/30_prefill/prefill.csv, median of 5 runs) at 1k..32k.
 Simultaneous arrivals only. Run: python3 analysis/front_model.py

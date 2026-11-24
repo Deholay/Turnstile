@@ -4,17 +4,15 @@ __pycache__/
 *.sqlite
 # Packed copy of bundle_8gpu/ for sending; rebuild with tar
 bundle_8gpu.tar.gz
-# LaTeX build output
-ppopp-template/*.aux
-ppopp-template/*.log
-ppopp-template/*.fls
-ppopp-template/*.fdb_latexmk
-ppopp-template/*.out
-ppopp-template/*.bbl
-ppopp-template/*.blg
 # Raw /proc/diskstats samples of the P4 jobs (~40 MB); kept locally and on NCHC
 nchc_p4/results/*/diskstats.csv
 # macOS Finder metadata
 .DS_Store
 # Default OUT_DIR of a fresh bundle run; archived runs live in bundle_8gpu/results/
 bundle_8gpu/out/
+# Our own writing (paper, plan, proposal, notes): kept locally, not published
+ppopp-template/
+PLAN.zh-TW.md
+paper.zh-TW.md
+turnstile-study-guide.html
+提案*.pdf

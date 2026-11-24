@@ -1,6 +1,6 @@
 # Turnstile: coordinated KV-cache restore from a shared SSD array
 
-Code, job scripts, raw results and paper source for restoring multi-turn LLM KV caches from a
+Code, job scripts and raw results for restoring multi-turn LLM KV caches from a
 node-local NVMe array instead of recomputing them, and for coordinating concurrent restores
 across up to 8 GPUs that share one array (fair sharing vs. SRPT, plus recompute-front).
 
@@ -23,14 +23,14 @@ and the sha256 of every source file and binary the job used.
 | `kill-test/` | Feasibility test on an RTX 5090 workstation (fio + HF prefill timing). |
 | `analysis/` | `front_model.py` (bandwidth model, Table bounds), `plot_multi.py` (Figure multi). |
 | `envs/` | `pip freeze` of the three NCHC Python environments (`kt2`, `kt3`, `kt4`). |
-| `ppopp-template/` | Paper source (`make` builds `main.pdf`). |
-| `PLAN.zh-TW.md` | Working plan and decision log (Traditional Chinese). |
 
 The source copies in `harness/`, `harness/v1115/` and `bundle_8gpu/src/` differ on purpose:
 each is the exact code a set of jobs ran. Do not merge them when reproducing a specific result;
 use the copy listed for that result below.
 
 ## Paper → result map
+
+The paper itself is not part of this repository; items are named by their LaTeX labels.
 
 | Paper item | Job(s) | Result files | Code |
 |---|---|---|---|
@@ -46,20 +46,16 @@ use the copy listed for that result below.
 | Correctness (greedy equality, checksums) | P2 472211, P4 481677, P7 481829 | `ttft_*.json`, `greedy_70b.json`, `check_front.json` | `ttft_kvr.py`, `check_greedy.py`, `check_front.py` |
 | vLLM 0.32 disk tier crashes | P4 481677, P4d 481718 | `nchc_p4/results/*/disk_tier_70b.log`, `p4d-*/d*.log` | `nchc_p4/disk_tier_ttft.py` (version run: git `1a52416`) |
 
-## Regenerate figures, model and paper (no GPU)
+## Regenerate figures and model (no GPU)
 
-Needs Python 3 with numpy and matplotlib, and TeX Live / MacTeX with latexmk.
+Needs Python 3 with numpy and matplotlib.
 
 ```bash
 python3 analysis/front_model.py
 ```
 
 ```bash
-python3 analysis/plot_multi.py bundle_8gpu/results/8gpu-2026-11-20 -o ppopp-template/figures/multi.pdf
-```
-
-```bash
-make -C ppopp-template
+python3 analysis/plot_multi.py bundle_8gpu/results/8gpu-2026-11-20 -o multi.pdf
 ```
 
 `plot_timeline.py` reads the SQLite exports of the nsys traces (`nsys export --type sqlite`),
@@ -158,7 +154,7 @@ under it. It refuses to start while another process uses the GPU.
 ## Gaps
 
 - P0 (LMCache time breakdown) and job 472017 (8B recompute at 4k–32k) predate this repo; their
-  numbers in Table `motiv`/`histlen` are recorded only in `PLAN.zh-TW.md`.
+  numbers in Table `motiv`/`histlen` have no result files here.
 - P1 (472200) ran a slightly earlier `restore.cu` (sha256 `ebdf20cf…`) than `harness/v1115/`;
   that exact file is lost. P4 and later used `harness/v1115/restore.cu`.
 - nsys `.nsys-rep`/`.sqlite` traces and P4's raw `diskstats.csv` (~40 MB) are not in git.
