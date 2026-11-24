@@ -1,0 +1,4 @@
+8b: B=46.3 GB/s t:measured k=[0, 5504, 8960, 11776, 13952, 15872, 17408, 18816]
+   predicted mean: fair 0.742  srpt 0.418  srpt+front 0.308  (recompute 0.957)
+70b: B=45.8 GB/s t:measured k=[0, 1792, 3328, 4736, 6016, 7168, 8192, 9216]
+   predicted mean: fair 1.874  srpt 1.054  srpt+front 0.940  (recompute 7.015)

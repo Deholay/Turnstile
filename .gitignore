@@ -14,3 +14,7 @@ ppopp-template/*.bbl
 ppopp-template/*.blg
 # Raw /proc/diskstats samples of the P4 jobs (~40 MB); kept locally and on NCHC
 nchc_p4/results/*/diskstats.csv
+# macOS Finder metadata
+.DS_Store
+# Default OUT_DIR of a fresh bundle run; archived runs live in bundle_8gpu/results/
+bundle_8gpu/out/

@@ -1,0 +1,17 @@
+Personalities : [raid1] [raid0] 
+md131 : active raid0 nvme7n1[7] nvme3n1[3] nvme6n1[6] nvme5n1[5] nvme4n1[4] nvme2n1[2] nvme0n1[0] nvme1n1[1]
+      30004846592 blocks super 1.2 512k chunks
+      
+md125 : active raid1 nvme9n1p2[0] nvme8n1p2[1]
+      204736 blocks super 1.0 [2/2] [UU]
+      bitmap: 0/1 pages [0KB], 65536KB chunk
+
+md126 : active raid1 nvme9n1p1[0] nvme8n1p1[1]
+      1046528 blocks super 1.2 [2/2] [UU]
+      bitmap: 0/1 pages [0KB], 65536KB chunk
+
+md127 : active raid1 nvme9n1p3[0] nvme8n1p3[1]
+      1873987584 blocks super 1.2 [2/2] [UU]
+      bitmap: 13/14 pages [52KB], 65536KB chunk
+
+unused devices: <none>

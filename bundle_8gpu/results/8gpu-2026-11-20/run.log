@@ -1,0 +1,16 @@
+== stage 00_preflight begin 2026-11-20T16:26:07+08:00
+== stage 00_preflight end status=ok 2026-11-20T16:26:11+08:00 
+== stage 01_build begin 2026-11-20T16:26:11+08:00
+== stage 01_build end status=ok 2026-11-20T16:26:18+08:00 
+== stage 02_smoke begin 2026-11-20T16:26:18+08:00
+== stage 02_smoke end status=ok 2026-11-20T16:26:43+08:00 
+== stage 20_concurrent begin 2026-11-20T16:26:43+08:00
+== stage 20_concurrent end status=ok 2026-11-20T16:28:43+08:00 
+== stage 31_front_emul begin 2026-11-20T16:28:43+08:00
+== stage 31_front_emul end status=ok 2026-11-20T16:29:11+08:00 
+== stage 21_writeback begin 2026-11-20T16:29:11+08:00
+== stage 21_writeback end status=skip 2026-11-20T16:29:11+08:00 fio not installed
+== stage 32_arrivals begin 2026-11-20T16:29:11+08:00
+== stage 32_arrivals end status=ok 2026-11-20T16:32:24+08:00 
+== stage 10_fio begin 2026-11-20T16:32:24+08:00
+== stage 10_fio end status=skip 2026-11-20T16:32:24+08:00 fio not installed

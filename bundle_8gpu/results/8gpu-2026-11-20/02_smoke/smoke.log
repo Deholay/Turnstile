@@ -1,0 +1,144 @@
++ env CUDA_VISIBLE_DEVICES=0 /work/USER/bundle_8gpu/runs/8gpu_484280/build/restore --file /tmp/kvr-USER-484280-vl7RdG/smoke_small.bin --write --layers 4 --tokens 2048
+geometry: 4 layers x 2048 tokens, tok_bytes=2048, item=512 KiB, items=64, file=0.03 GiB
+wrote /tmp/kvr-USER-484280-vl7RdG/smoke_small.bin: 0.03 GiB in 0.01 s (4.68 GB/s)
++ env CUDA_VISIBLE_DEVICES=0 /work/USER/bundle_8gpu/runs/8gpu_484280/build/restore --file /tmp/kvr-USER-484280-vl7RdG/smoke_small.bin --layers 4 --tokens 2048 --runs 1 --warmup 1 --mode copy --start-tokens 0
+geometry: 4 layers x 2048 tokens, tok_bytes=2048, item=512 KiB, items=64, file=0.03 GiB
+gpu: NVIDIA H200, mode=copy threads=8 qd=8 ring=256 batch=32 overlap=yes
+timing pid 2203376 run 0 bytes 33554432 start 17286374.037693 end 17286374.039550
+warmup 0: total 0.0019 s  read 0.0018 s  18.06 GB/s  layer0 0.57 ms  last 1.84 ms  mismatches 0
+timing pid 2203376 run 1 bytes 33554432 start 17286374.071717 end 17286374.073554
+run 0: total 0.0018 s  read 0.0018 s  18.27 GB/s  layer0 0.43 ms  last 1.83 ms  mismatches 0
+median 0.0018 s (18.27 GB/s), IQR [0.0018, 0.0018]
++ env CUDA_VISIBLE_DEVICES=0 /work/USER/bundle_8gpu/runs/8gpu_484280/build/restore --file /tmp/kvr-USER-484280-vl7RdG/smoke_small.bin --layers 4 --tokens 2048 --runs 1 --warmup 1 --mode copy --start-tokens 1024
+geometry: 4 layers x 2048 tokens, tok_bytes=2048, item=512 KiB, items=64, file=0.03 GiB
+partial: start_tokens=1024 -> segments [8, 16) per layer, items=32, read=0.02 GiB
+gpu: NVIDIA H200, mode=copy threads=8 qd=8 ring=256 batch=32 overlap=yes
+timing pid 2203401 run 0 bytes 16777216 start 17286374.998791 end 17286375.000288
+warmup 0: total 0.0015 s  read 0.0015 s  11.21 GB/s  layer0 0.48 ms  last 1.48 ms  mismatches 0
+timing pid 2203401 run 1 bytes 16777216 start 17286375.026677 end 17286375.028150
+run 0: total 0.0015 s  read 0.0014 s  11.39 GB/s  layer0 0.32 ms  last 1.46 ms  mismatches 0
+median 0.0015 s (11.39 GB/s), IQR [0.0015, 0.0015]
++ env CUDA_VISIBLE_DEVICES=0 /work/USER/bundle_8gpu/runs/8gpu_484280/build/restore --file /tmp/kvr-USER-484280-vl7RdG/smoke_small.bin --layers 4 --tokens 2048 --runs 1 --warmup 1 --mode copy --start-tokens 1040
+geometry: 4 layers x 2048 tokens, tok_bytes=2048, item=512 KiB, items=64, file=0.03 GiB
+partial: start_tokens=1040 -> segments [8, 16) per layer, items=32, read=0.02 GiB
+gpu: NVIDIA H200, mode=copy threads=8 qd=8 ring=256 batch=32 overlap=yes
+timing pid 2203425 run 0 bytes 16777216 start 17286375.957632 end 17286375.959111
+warmup 0: total 0.0015 s  read 0.0014 s  11.34 GB/s  layer0 0.45 ms  last 1.46 ms  mismatches 0
+timing pid 2203425 run 1 bytes 16777216 start 17286375.987671 end 17286375.989148
+run 0: total 0.0015 s  read 0.0014 s  11.36 GB/s  layer0 0.30 ms  last 1.47 ms  mismatches 0
+median 0.0015 s (11.36 GB/s), IQR [0.0015, 0.0015]
++ env CUDA_VISIBLE_DEVICES=0 /work/USER/bundle_8gpu/runs/8gpu_484280/build/restore --file /tmp/kvr-USER-484280-vl7RdG/smoke_small.bin --layers 4 --tokens 2048 --runs 1 --warmup 1 --mode copy --start-tokens 1920
+geometry: 4 layers x 2048 tokens, tok_bytes=2048, item=512 KiB, items=64, file=0.03 GiB
+partial: start_tokens=1920 -> segments [15, 16) per layer, items=4, read=0.00 GiB
+gpu: NVIDIA H200, mode=copy threads=8 qd=8 ring=256 batch=32 overlap=yes
+timing pid 2203449 run 0 bytes 2097152 start 17286376.933897 end 17286376.934498
+warmup 0: total 0.0006 s  read 0.0005 s  3.49 GB/s  layer0 0.56 ms  last 0.59 ms  mismatches 0
+timing pid 2203449 run 1 bytes 2097152 start 17286376.961704 end 17286376.962241
+run 0: total 0.0005 s  read 0.0005 s  3.90 GB/s  layer0 0.52 ms  last 0.53 ms  mismatches 0
+median 0.0005 s (3.90 GB/s), IQR [0.0005, 0.0005]
++ env CUDA_VISIBLE_DEVICES=0 /work/USER/bundle_8gpu/runs/8gpu_484280/build/restore --file /tmp/kvr-USER-484280-vl7RdG/smoke_small.bin --layers 4 --tokens 2048 --runs 1 --warmup 1 --mode direct --start-tokens 0
+geometry: 4 layers x 2048 tokens, tok_bytes=2048, item=512 KiB, items=64, file=0.03 GiB
+gpu: NVIDIA H200, mode=direct threads=8 qd=8 ring=256 batch=32 overlap=yes
+timing pid 2203472 run 0 bytes 33554432 start 17286377.902706 end 17286377.904565
+warmup 0: total 0.0019 s  read 0.0018 s  18.05 GB/s  layer0 0.63 ms  last 1.84 ms  mismatches 0
+timing pid 2203472 run 1 bytes 33554432 start 17286377.929788 end 17286377.931627
+run 0: total 0.0018 s  read 0.0018 s  18.25 GB/s  layer0 0.56 ms  last 1.83 ms  mismatches 0
+median 0.0018 s (18.25 GB/s), IQR [0.0018, 0.0018]
++ env CUDA_VISIBLE_DEVICES=0 /work/USER/bundle_8gpu/runs/8gpu_484280/build/restore --file /tmp/kvr-USER-484280-vl7RdG/smoke_small.bin --layers 4 --tokens 2048 --runs 1 --warmup 1 --mode direct --start-tokens 1024
+geometry: 4 layers x 2048 tokens, tok_bytes=2048, item=512 KiB, items=64, file=0.03 GiB
+partial: start_tokens=1024 -> segments [8, 16) per layer, items=32, read=0.02 GiB
+gpu: NVIDIA H200, mode=direct threads=8 qd=8 ring=256 batch=32 overlap=yes
+timing pid 2203495 run 0 bytes 16777216 start 17286378.901141 end 17286378.902638
+warmup 0: total 0.0015 s  read 0.0015 s  11.21 GB/s  layer0 0.54 ms  last 1.48 ms  mismatches 0
+timing pid 2203495 run 1 bytes 16777216 start 17286378.934725 end 17286378.936203
+run 0: total 0.0015 s  read 0.0014 s  11.35 GB/s  layer0 0.32 ms  last 1.47 ms  mismatches 0
+median 0.0015 s (11.35 GB/s), IQR [0.0015, 0.0015]
++ env CUDA_VISIBLE_DEVICES=0 /work/USER/bundle_8gpu/runs/8gpu_484280/build/restore --file /tmp/kvr-USER-484280-vl7RdG/smoke_small.bin --layers 4 --tokens 2048 --runs 1 --warmup 1 --mode direct --start-tokens 1040
+geometry: 4 layers x 2048 tokens, tok_bytes=2048, item=512 KiB, items=64, file=0.03 GiB
+partial: start_tokens=1040 -> segments [8, 16) per layer, items=32, read=0.02 GiB
+gpu: NVIDIA H200, mode=direct threads=8 qd=8 ring=256 batch=32 overlap=yes
+timing pid 2203519 run 0 bytes 16777216 start 17286379.875209 end 17286379.876692
+warmup 0: total 0.0015 s  read 0.0014 s  11.31 GB/s  layer0 0.51 ms  last 1.46 ms  mismatches 0
+timing pid 2203519 run 1 bytes 16777216 start 17286379.914712 end 17286379.916209
+run 0: total 0.0015 s  read 0.0014 s  11.20 GB/s  layer0 0.34 ms  last 1.49 ms  mismatches 0
+median 0.0015 s (11.20 GB/s), IQR [0.0015, 0.0015]
++ env CUDA_VISIBLE_DEVICES=0 /work/USER/bundle_8gpu/runs/8gpu_484280/build/restore --file /tmp/kvr-USER-484280-vl7RdG/smoke_small.bin --layers 4 --tokens 2048 --runs 1 --warmup 1 --mode direct --start-tokens 1920
+geometry: 4 layers x 2048 tokens, tok_bytes=2048, item=512 KiB, items=64, file=0.03 GiB
+partial: start_tokens=1920 -> segments [15, 16) per layer, items=4, read=0.00 GiB
+gpu: NVIDIA H200, mode=direct threads=8 qd=8 ring=256 batch=32 overlap=yes
+timing pid 2203759 run 0 bytes 2097152 start 17286380.887486 end 17286380.888214
+warmup 0: total 0.0007 s  read 0.0005 s  2.88 GB/s  layer0 0.67 ms  last 0.71 ms  mismatches 0
+timing pid 2203759 run 1 bytes 2097152 start 17286380.913730 end 17286380.914266
+run 0: total 0.0005 s  read 0.0005 s  3.92 GB/s  layer0 0.52 ms  last 0.53 ms  mismatches 0
+median 0.0005 s (3.92 GB/s), IQR [0.0005, 0.0005]
++ env CUDA_VISIBLE_DEVICES=0 /work/USER/bundle_8gpu/runs/8gpu_484280/build/restore --file /tmp/kvr-USER-484280-vl7RdG/8b_0.bin --layers 32 --kv-heads 8 --head-dim 128 --tokens 32768 --threads 8 --qd 32 --mode copy --runs 1 --warmup 1
+geometry: 32 layers x 32768 tokens, tok_bytes=2048, item=512 KiB, items=8192, file=4.00 GiB
+gpu: NVIDIA H200, mode=copy threads=8 qd=32 ring=256 batch=32 overlap=yes
+timing pid 2204812 run 0 bytes 4294967296 start 17286383.542813 end 17286383.636100
+warmup 0: total 0.0933 s  read 0.0927 s  46.04 GB/s  layer0 3.79 ms  last 93.26 ms  mismatches 0
+timing pid 2204812 run 1 bytes 4294967296 start 17286383.681716 end 17286383.777699
+run 0: total 0.0960 s  read 0.0957 s  44.75 GB/s  layer0 3.76 ms  last 95.97 ms  mismatches 0
+median 0.0960 s (44.75 GB/s), IQR [0.0960, 0.0960]
++ env CUDA_VISIBLE_DEVICES=1 /work/USER/bundle_8gpu/runs/8gpu_484280/build/restore --file /tmp/kvr-USER-484280-vl7RdG/8b_1.bin --layers 32 --kv-heads 8 --head-dim 128 --tokens 32768 --threads 8 --qd 32 --mode copy --runs 1 --warmup 1
+geometry: 32 layers x 32768 tokens, tok_bytes=2048, item=512 KiB, items=8192, file=4.00 GiB
+gpu: NVIDIA H200, mode=copy threads=8 qd=32 ring=256 batch=32 overlap=yes
+timing pid 2204858 run 0 bytes 4294967296 start 17286384.828159 end 17286384.922788
+warmup 0: total 0.0946 s  read 0.0944 s  45.39 GB/s  layer0 3.66 ms  last 94.61 ms  mismatches 0
+timing pid 2204858 run 1 bytes 4294967296 start 17286384.957706 end 17286385.050678
+run 0: total 0.0930 s  read 0.0926 s  46.20 GB/s  layer0 3.75 ms  last 92.96 ms  mismatches 0
+median 0.0930 s (46.20 GB/s), IQR [0.0930, 0.0930]
++ env CUDA_VISIBLE_DEVICES=2 /work/USER/bundle_8gpu/runs/8gpu_484280/build/restore --file /tmp/kvr-USER-484280-vl7RdG/8b_2.bin --layers 32 --kv-heads 8 --head-dim 128 --tokens 32768 --threads 8 --qd 32 --mode copy --runs 1 --warmup 1
+geometry: 32 layers x 32768 tokens, tok_bytes=2048, item=512 KiB, items=8192, file=4.00 GiB
+gpu: NVIDIA H200, mode=copy threads=8 qd=32 ring=256 batch=32 overlap=yes
+timing pid 2204912 run 0 bytes 4294967296 start 17286386.093009 end 17286386.188377
+warmup 0: total 0.0954 s  read 0.0948 s  45.04 GB/s  layer0 3.67 ms  last 95.35 ms  mismatches 0
+timing pid 2204912 run 1 bytes 4294967296 start 17286386.225701 end 17286386.320717
+run 0: total 0.0950 s  read 0.0947 s  45.20 GB/s  layer0 3.50 ms  last 95.01 ms  mismatches 0
+median 0.0950 s (45.20 GB/s), IQR [0.0950, 0.0950]
++ env CUDA_VISIBLE_DEVICES=3 /work/USER/bundle_8gpu/runs/8gpu_484280/build/restore --file /tmp/kvr-USER-484280-vl7RdG/8b_3.bin --layers 32 --kv-heads 8 --head-dim 128 --tokens 32768 --threads 8 --qd 32 --mode copy --runs 1 --warmup 1
+geometry: 32 layers x 32768 tokens, tok_bytes=2048, item=512 KiB, items=8192, file=4.00 GiB
+gpu: NVIDIA H200, mode=copy threads=8 qd=32 ring=256 batch=32 overlap=yes
+timing pid 2205116 run 0 bytes 4294967296 start 17286387.316420 end 17286387.409820
+warmup 0: total 0.0934 s  read 0.0928 s  45.98 GB/s  layer0 3.89 ms  last 93.39 ms  mismatches 0
+timing pid 2205116 run 1 bytes 4294967296 start 17286387.449631 end 17286387.542757
+run 0: total 0.0931 s  read 0.0928 s  46.12 GB/s  layer0 3.61 ms  last 93.12 ms  mismatches 0
+median 0.0931 s (46.12 GB/s), IQR [0.0931, 0.0931]
++ env CUDA_VISIBLE_DEVICES=4 /work/USER/bundle_8gpu/runs/8gpu_484280/build/restore --file /tmp/kvr-USER-484280-vl7RdG/8b_4.bin --layers 32 --kv-heads 8 --head-dim 128 --tokens 32768 --threads 8 --qd 32 --mode copy --runs 1 --warmup 1
+geometry: 32 layers x 32768 tokens, tok_bytes=2048, item=512 KiB, items=8192, file=4.00 GiB
+gpu: NVIDIA H200, mode=copy threads=8 qd=32 ring=256 batch=32 overlap=yes
+timing pid 2205141 run 0 bytes 4294967296 start 17286388.570238 end 17286388.664053
+warmup 0: total 0.0938 s  read 0.0930 s  45.78 GB/s  layer0 3.81 ms  last 93.80 ms  mismatches 0
+timing pid 2205141 run 1 bytes 4294967296 start 17286388.700220 end 17286388.793856
+run 0: total 0.0936 s  read 0.0933 s  45.87 GB/s  layer0 3.89 ms  last 93.63 ms  mismatches 0
+median 0.0936 s (45.87 GB/s), IQR [0.0936, 0.0936]
++ env CUDA_VISIBLE_DEVICES=5 /work/USER/bundle_8gpu/runs/8gpu_484280/build/restore --file /tmp/kvr-USER-484280-vl7RdG/8b_5.bin --layers 32 --kv-heads 8 --head-dim 128 --tokens 32768 --threads 8 --qd 32 --mode copy --runs 1 --warmup 1
+geometry: 32 layers x 32768 tokens, tok_bytes=2048, item=512 KiB, items=8192, file=4.00 GiB
+gpu: NVIDIA H200, mode=copy threads=8 qd=32 ring=256 batch=32 overlap=yes
+timing pid 2205165 run 0 bytes 4294967296 start 17286389.783156 end 17286389.876502
+warmup 0: total 0.0933 s  read 0.0929 s  46.01 GB/s  layer0 3.75 ms  last 93.33 ms  mismatches 0
+timing pid 2205165 run 1 bytes 4294967296 start 17286389.919627 end 17286390.012588
+run 0: total 0.0930 s  read 0.0928 s  46.20 GB/s  layer0 3.64 ms  last 92.95 ms  mismatches 0
+median 0.0930 s (46.20 GB/s), IQR [0.0930, 0.0930]
++ env CUDA_VISIBLE_DEVICES=6 /work/USER/bundle_8gpu/runs/8gpu_484280/build/restore --file /tmp/kvr-USER-484280-vl7RdG/8b_6.bin --layers 32 --kv-heads 8 --head-dim 128 --tokens 32768 --threads 8 --qd 32 --mode copy --runs 1 --warmup 1
+geometry: 32 layers x 32768 tokens, tok_bytes=2048, item=512 KiB, items=8192, file=4.00 GiB
+gpu: NVIDIA H200, mode=copy threads=8 qd=32 ring=256 batch=32 overlap=yes
+timing pid 2205189 run 0 bytes 4294967296 start 17286391.047409 end 17286391.141328
+warmup 0: total 0.0939 s  read 0.0929 s  45.73 GB/s  layer0 3.84 ms  last 93.90 ms  mismatches 0
+timing pid 2205189 run 1 bytes 4294967296 start 17286391.178690 end 17286391.272477
+run 0: total 0.0938 s  read 0.0933 s  45.79 GB/s  layer0 3.96 ms  last 93.78 ms  mismatches 0
+median 0.0938 s (45.79 GB/s), IQR [0.0938, 0.0938]
++ env CUDA_VISIBLE_DEVICES=7 /work/USER/bundle_8gpu/runs/8gpu_484280/build/restore --file /tmp/kvr-USER-484280-vl7RdG/8b_7.bin --layers 32 --kv-heads 8 --head-dim 128 --tokens 32768 --threads 8 --qd 32 --mode copy --runs 1 --warmup 1
+geometry: 32 layers x 32768 tokens, tok_bytes=2048, item=512 KiB, items=8192, file=4.00 GiB
+gpu: NVIDIA H200, mode=copy threads=8 qd=32 ring=256 batch=32 overlap=yes
+timing pid 2205215 run 0 bytes 4294967296 start 17286392.285719 end 17286392.382094
+warmup 0: total 0.0964 s  read 0.0963 s  44.57 GB/s  layer0 3.81 ms  last 96.36 ms  mismatches 0
+timing pid 2205215 run 1 bytes 4294967296 start 17286392.421773 end 17286392.518610
+run 0: total 0.0968 s  read 0.0968 s  44.35 GB/s  layer0 3.82 ms  last 96.83 ms  mismatches 0
+median 0.0968 s (44.35 GB/s), IQR [0.0968, 0.0968]
++ python3 /work/USER/bundle_8gpu/runs/8gpu_484280/scripts/launch.py --spec /work/USER/bundle_8gpu/runs/8gpu_484280/out/02_smoke/spec2.json --csv /work/USER/bundle_8gpu/runs/8gpu_484280/out/02_smoke/coord2.csv --exp smoke --reps 2 --policy fair --restore /work/USER/bundle_8gpu/runs/8gpu_484280/build/restore --threads 8 --qd 32 --mode copy --logdir /work/USER/bundle_8gpu/runs/8gpu_484280/out/02_smoke/logs
++ python3 /work/USER/bundle_8gpu/runs/8gpu_484280/scripts/launch.py --spec /work/USER/bundle_8gpu/runs/8gpu_484280/out/02_smoke/spec2.json --csv /work/USER/bundle_8gpu/runs/8gpu_484280/out/02_smoke/coord2.csv --exp smoke --reps 2 --policy srpt --restore /work/USER/bundle_8gpu/runs/8gpu_484280/build/restore --threads 8 --qd 32 --mode copy --logdir /work/USER/bundle_8gpu/runs/8gpu_484280/out/02_smoke/logs
+fair rep 0: end times 0.168 0.168 ratio 1.00
+fair rep 1: end times 0.155 0.168 ratio 1.09
+srpt rep 0: end times 0.092 0.175 ratio 1.90
+srpt rep 1: end times 0.090 0.174 ratio 1.93
+SRPT_SERIALIZES yes

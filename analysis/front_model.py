@@ -2,7 +2,7 @@
 
 Inputs are H200 measurements (PLAN.zh-TW.md): B = 54.2 GB/s, 8B prefill t(n) at 0/4k/8k/16k/32k,
 linear interpolation in between. 70B t(n) is the measured prefill time of the 8-GPU node (stage 30,
-out/30_prefill/prefill.csv, median of 5 runs) at 1k..32k.
+bundle_8gpu/results/8gpu-2026-11-20/30_prefill/prefill.csv, median of 5 runs) at 1k..32k.
 Simultaneous arrivals only. Run: python3 analysis/front_model.py
 """
 import numpy as np

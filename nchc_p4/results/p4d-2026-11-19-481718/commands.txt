@@ -1,0 +1,25 @@
+# job 481718 on hgpn39 Thu Nov 19 13:32:02 CST 2026
+core file size          (blocks, -c) 0
+max locked memory       (kbytes, -l) unlimited
+stack size              (kbytes, -s) unlimited
+NVIDIA H200, 550.127.08
+2852ed16200ccb1ffab9f41212d9e17f2ccd545c1576d748731fa4b53211cb5c  /home/u1444832/p4/disk_tier_ttft.py
+8ffd2ef3fd1fe73aa01ccfae58fa46b9b3e66f375811e51ed3db4223857f1bcc  /home/u1444832/p4/p4d_job.sh
+/dev/md131 xfs    rw,relatime,attr2,inode64,logbufs=8,logbsize=32k,sunit=1024,swidth=8192,usrquota,prjquota
+== d1_8b_odirect start 13:32:02
+== d1_8b_odirect exit 139 13:33:52
+engine ready in 53.6 s
+store 0: prefill+store-issue 0.930 s
+store 1: prefill+store-issue 0.940 s
+!!!!!!! Segfault encountered !!!!!!!
+== d2_70b_odirect start 13:33:52
+== d2_70b_odirect exit 139 13:35:57
+engine ready in 63.8 s
+store 0: prefill+store-issue 6.585 s
+!!!!!!! Segfault encountered !!!!!!!
+== d3_70b_pagecache start 13:35:57
+== d3_70b_pagecache exit 139 13:37:59
+engine ready in 59.4 s
+store 0: prefill+store-issue 6.595 s
+!!!!!!! Segfault encountered !!!!!!!
+# done Thu Nov 19 13:37:59 CST 2026

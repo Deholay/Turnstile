@@ -1,0 +1,32 @@
+geometry: 32 layers x 32768 tokens, tok_bytes=2048, item=512 KiB, items=8192, file=4.00 GiB
+wrote /tmp/kvr-USER-484280-vl7RdG/8b_0.bin: 4.00 GiB in 0.18 s (24.24 GB/s)
+geometry: 32 layers x 32768 tokens, tok_bytes=2048, item=512 KiB, items=8192, file=4.00 GiB
+wrote /tmp/kvr-USER-484280-vl7RdG/8b_1.bin: 4.00 GiB in 0.19 s (23.21 GB/s)
+geometry: 32 layers x 32768 tokens, tok_bytes=2048, item=512 KiB, items=8192, file=4.00 GiB
+wrote /tmp/kvr-USER-484280-vl7RdG/8b_2.bin: 4.00 GiB in 0.18 s (23.51 GB/s)
+geometry: 32 layers x 32768 tokens, tok_bytes=2048, item=512 KiB, items=8192, file=4.00 GiB
+wrote /tmp/kvr-USER-484280-vl7RdG/8b_3.bin: 4.00 GiB in 0.17 s (24.79 GB/s)
+geometry: 32 layers x 32768 tokens, tok_bytes=2048, item=512 KiB, items=8192, file=4.00 GiB
+wrote /tmp/kvr-USER-484280-vl7RdG/8b_4.bin: 4.00 GiB in 0.18 s (23.95 GB/s)
+geometry: 32 layers x 32768 tokens, tok_bytes=2048, item=512 KiB, items=8192, file=4.00 GiB
+wrote /tmp/kvr-USER-484280-vl7RdG/8b_5.bin: 4.00 GiB in 0.18 s (23.38 GB/s)
+geometry: 32 layers x 32768 tokens, tok_bytes=2048, item=512 KiB, items=8192, file=4.00 GiB
+wrote /tmp/kvr-USER-484280-vl7RdG/8b_6.bin: 4.00 GiB in 0.19 s (22.55 GB/s)
+geometry: 32 layers x 32768 tokens, tok_bytes=2048, item=512 KiB, items=8192, file=4.00 GiB
+wrote /tmp/kvr-USER-484280-vl7RdG/8b_7.bin: 4.00 GiB in 0.18 s (23.47 GB/s)
+geometry: 80 layers x 32768 tokens, tok_bytes=2048, item=512 KiB, items=20480, file=10.00 GiB
+wrote /tmp/kvr-USER-484280-vl7RdG/70b_0.bin: 10.00 GiB in 0.46 s (23.35 GB/s)
+geometry: 80 layers x 32768 tokens, tok_bytes=2048, item=512 KiB, items=20480, file=10.00 GiB
+wrote /tmp/kvr-USER-484280-vl7RdG/70b_1.bin: 10.00 GiB in 0.47 s (22.68 GB/s)
+geometry: 80 layers x 32768 tokens, tok_bytes=2048, item=512 KiB, items=20480, file=10.00 GiB
+wrote /tmp/kvr-USER-484280-vl7RdG/70b_2.bin: 10.00 GiB in 0.46 s (23.24 GB/s)
+geometry: 80 layers x 32768 tokens, tok_bytes=2048, item=512 KiB, items=20480, file=10.00 GiB
+wrote /tmp/kvr-USER-484280-vl7RdG/70b_3.bin: 10.00 GiB in 0.47 s (23.03 GB/s)
+geometry: 80 layers x 32768 tokens, tok_bytes=2048, item=512 KiB, items=20480, file=10.00 GiB
+wrote /tmp/kvr-USER-484280-vl7RdG/70b_4.bin: 10.00 GiB in 0.45 s (24.06 GB/s)
+geometry: 80 layers x 32768 tokens, tok_bytes=2048, item=512 KiB, items=20480, file=10.00 GiB
+wrote /tmp/kvr-USER-484280-vl7RdG/70b_5.bin: 10.00 GiB in 0.47 s (23.00 GB/s)
+geometry: 80 layers x 32768 tokens, tok_bytes=2048, item=512 KiB, items=20480, file=10.00 GiB
+wrote /tmp/kvr-USER-484280-vl7RdG/70b_6.bin: 10.00 GiB in 0.47 s (23.03 GB/s)
+geometry: 80 layers x 32768 tokens, tok_bytes=2048, item=512 KiB, items=20480, file=10.00 GiB
+wrote /tmp/kvr-USER-484280-vl7RdG/70b_7.bin: 10.00 GiB in 0.46 s (23.36 GB/s)

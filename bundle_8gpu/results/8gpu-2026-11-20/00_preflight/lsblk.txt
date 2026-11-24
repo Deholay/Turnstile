@@ -1,0 +1,46 @@
+NAME          SIZE TYPE  MODEL                                    ROTA MOUNTPOINT
+loop0           2G loop                                              0 /opt/weka/logs
+loop1       148.1M loop                                              0 
+loop2       289.4M loop                                              0 
+loop3        26.4M loop                                              0 
+loop4         7.1M loop                                              0 
+loop5          16M loop                                              0 
+loop6          76K loop                                              0 
+loop7        15.3M loop                                              0 
+loop8         3.9M loop                                              0 
+loop9        83.2M loop                                              0 
+loop10         44K loop                                              0 
+loop11        140K loop                                              0 
+loop12          2G loop                                              0 
+loop13          2G loop                                              0 
+sr0          1024M rom   Virtual CDROM0                              1 
+nvme8n1       1.8T disk  SAMSUNG MZQL21T9HCJR-00A07                  0 
+|-nvme8n1p1     1G part                                              0 
+| `-md126    1022M raid1                                             0 /boot
+|-nvme8n1p2   200M part                                              0 
+| `-md125     200M raid1                                             0 /boot/efi
+`-nvme8n1p3   1.8T part                                              0 
+  `-md127     1.8T raid1                                             0 /
+nvme0n1       3.5T disk  SAMSUNG MZQL23T8HCLS-00A07                  0 
+`-md131        28T raid0                                             0 /tmp
+nvme2n1       3.5T disk  SAMSUNG MZQL23T8HCLS-00A07                  0 
+`-md131        28T raid0                                             0 /tmp
+nvme1n1       3.5T disk  SAMSUNG MZQL23T8HCLS-00A07                  0 
+`-md131        28T raid0                                             0 /tmp
+nvme5n1       3.5T disk  SAMSUNG MZQL23T8HCLS-00A07                  0 
+`-md131        28T raid0                                             0 /tmp
+nvme4n1       3.5T disk  SAMSUNG MZQL23T8HCLS-00A07                  0 
+`-md131        28T raid0                                             0 /tmp
+nvme3n1       3.5T disk  SAMSUNG MZQL23T8HCLS-00A07                  0 
+`-md131        28T raid0                                             0 /tmp
+nvme6n1       3.5T disk  SAMSUNG MZQL23T8HCLS-00A07                  0 
+`-md131        28T raid0                                             0 /tmp
+nvme7n1       3.5T disk  SAMSUNG MZQL23T8HCLS-00A07                  0 
+`-md131        28T raid0                                             0 /tmp
+nvme9n1       1.8T disk  SAMSUNG MZQL21T9HCJR-00A07                  0 
+|-nvme9n1p1     1G part                                              0 
+| `-md126    1022M raid1                                             0 /boot
+|-nvme9n1p2   200M part                                              0 
+| `-md125     200M raid1                                             0 /boot/efi
+`-nvme9n1p3   1.8T part                                              0 
+  `-md127     1.8T raid1                                             0 /
