@@ -42,36 +42,36 @@ def main():
     a = p.parse_args()
     conc = per_rep(f"{a.out}/20_concurrent/concurrent.csv")
     front = per_rep(f"{a.out}/31_front_emul/front.csv", front=True)
-    plt.rcParams.update({"font.family": "serif", "font.size": 7, "pdf.fonttype": 42,
-                         "axes.titlesize": 7.5, "axes.labelsize": 7})
-    fig, axs = plt.subplots(1, 2, figsize=(3.33, 1.75), constrained_layout=True)
+    plt.rcParams.update({"font.family": "serif", "font.size": 8, "pdf.fonttype": 42,
+                         "axes.titlesize": 8, "axes.labelsize": 8})
+    fig, axs = plt.subplots(1, 2, figsize=(3.33, 2.3), constrained_layout=True)
     Gs = [1, 2, 4, 8]
     recompute = {"8b": 0.957, "70b": 7.015}  # stage 30, 32k prefill on the same node
     for ax, geo, title in zip(axs, ["8b", "70b"], ["(a) 8B", "(b) 70B"]):
-        for pol, lab in [("fair", "fair (uncoordinated)"), ("srpt", "SRPT")]:
+        for pol, lab in [("fair", "fair"), ("srpt", "SRPT")]:
             xs = [G for G in Gs if (geo, pol, G) in conc or (pol == "srpt" and G == 1)]
             src = lambda G: conc[(geo, "fair" if G == 1 else pol, G)]  # G=1: one restore
             ax.plot(xs, [src(G)[0] for G in xs], "-o", color=C[pol], ms=2.5, lw=1.1,
                     label=lab + ", mean")
             ax.plot(xs, [src(G)[1] for G in xs], "--", color=C[pol], lw=0.9, label=lab + ", slowest")
         m, x = front[(geo, "srpt", 8)]
-        ax.plot([8], [m], "D", color=C["front"], ms=3.5, label="SRPT + recompute-front, mean")
-        ax.plot([8], [x], "d", mfc="none", color=C["front"], ms=4, label="SRPT + recompute-front, slowest")
+        ax.plot([8], [m], "D", color=C["front"], ms=3.5, label="SRPT+front, mean")
+        ax.plot([8], [x], "d", mfc="none", color=C["front"], ms=4, label="SRPT+front, slowest")
         if recompute[geo] < 2:
             ax.axhline(recompute[geo], color=INK2, lw=0.7, ls=":")
-            ax.text(1, recompute[geo] * 0.97, "recompute", color=INK2, fontsize=6, va="top")
+            ax.text(1, recompute[geo] * 0.97, "recompute", color=INK2, fontsize=8, va="top")
         else:
-            ax.text(1, 1.78, f"recompute: {recompute[geo]:.1f} s", color=INK2, fontsize=6, va="top")
+            ax.text(1, 1.78, f"recompute: {recompute[geo]:.1f} s", color=INK2, fontsize=8, va="top")
         ax.set_xscale("log", base=2)
         ax.set_xticks(Gs, [str(G) for G in Gs])
-        ax.set_xlabel("GPUs restoring at once ($G$)", color=INK2)
+        ax.set_xlabel("concurrent restores $G$", color=INK2)
         ax.set_title(title, loc="left", pad=2, color=INK)
         ax.set_ylim(0, None)
         for s in ("top", "right"):
             ax.spines[s].set_visible(False)
     axs[0].set_ylabel("restore time (s)", color=INK2)
     h, l = axs[0].get_legend_handles_labels()
-    fig.legend(h, l, loc="outside upper center", ncol=2, frameon=False, fontsize=5.8,
+    fig.legend(h, l, loc="outside upper center", ncol=2, frameon=False, fontsize=8,
                handlelength=1.8, columnspacing=1.0, labelcolor=INK)
     fig.savefig(a.o)
     fig.savefig(a.o.rsplit(".", 1)[0] + ".png", dpi=300)

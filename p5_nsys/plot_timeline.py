@@ -107,11 +107,11 @@ def throughput(ax, st, dur, xmax, title):
         ax.plot(x, y, color=C[k], lw=1.2, solid_capstyle="round", label=NAME[k])
         ymax = max(ymax, y.max() if len(y) else 0)
     ax.axvline(dur, color=INK2, lw=0.6, ls=(0, (2, 2)))
-    ax.text(dur, ymax * 1.18, f" {dur:.0f} ms", fontsize=6.5, color=INK2, va="top")
+    ax.text(dur, ymax * 1.18, f" {dur:.0f} ms", fontsize=8, color=INK2, va="top")
     ax.set_xlim(0, xmax)
     ax.set_ylim(0, ymax * 1.25)
     ax.set_ylabel("GB/s", color=INK2)
-    ax.set_title(title, fontsize=7.5, color=INK, loc="left", pad=2)
+    ax.set_title(title, fontsize=8, color=INK, loc="left", pad=2)
     style(ax)
 
 
@@ -128,11 +128,11 @@ def gantt(ax, st, dur, win=1.0):
             mx = max(inflight.max(), 1)
             ax.fill_between(t - a, y - 0.35, y - 0.35 + 0.7 * inflight / mx, step="mid",
                             color=C[k], lw=0)
-            ax.text(win * 1.01, y, f"≤{mx} in flight", fontsize=6, color=INK2, va="center")
+            ax.text(win * 1.01, y, f"≤{mx} in flight", fontsize=8, color=INK2, va="center")
         else:
             ax.broken_barh([(s - a, e - s) for s, e, _ in iv], (y - 0.35, 0.7),
                            facecolors=C[k], edgecolors="white", linewidth=0.3)
-    ax.set_yticks([y for _, y in lanes], [NAME[k] for k, _ in lanes], fontsize=6.5)
+    ax.set_yticks([y for _, y in lanes], [NAME[k] for k, _ in lanes], fontsize=8)
     ax.set_xlim(0, win)
     ax.set_ylim(-0.6, 2.6)
     ax.set_xlabel(f"time within 1 ms window at t = {a:.0f} ms (ms)", color=INK2)
@@ -146,24 +146,24 @@ def main():
     p.add_argument("--nooverlap")
     p.add_argument("-o", "--out", default="timeline.pdf")
     a = p.parse_args()
-    plt.rcParams.update({"font.family": "serif", "font.size": 7, "pdf.fonttype": 42,
-                         "axes.titlesize": 7.5, "axes.labelsize": 7})
+    plt.rcParams.update({"font.family": "serif", "font.size": 8, "pdf.fonttype": 42,
+                         "axes.titlesize": 8, "axes.labelsize": 8})
     st, dur = load(a.overlap)
     no = load(a.nooverlap) if a.nooverlap else None
     xmax = max(dur, no[1] if no else 0) * 1.08
     rows = [1, 1, 0.9] if no else [1, 0.9]
-    fig, axs = plt.subplots(len(rows), 1, figsize=(3.33, 1.15 * sum(rows) + 0.3),
+    fig, axs = plt.subplots(len(rows), 1, figsize=(3.33, 1.3 * sum(rows) + 0.35),
                             gridspec_kw={"height_ratios": rows}, constrained_layout=True)
     throughput(axs[0], st, dur, xmax, "(a) Overlapped pipeline")
     axs[0].legend(loc="lower center", bbox_to_anchor=(0.5, 1.12), ncol=3, frameon=False,
-                  fontsize=6.5, handlelength=1.4, columnspacing=1.2, labelcolor=INK)
+                  fontsize=8, handlelength=1.4, columnspacing=1.2, labelcolor=INK)
     if no:
-        throughput(axs[1], no[0], no[1], xmax, "(b) No overlap: read all, then copy and scatter")
+        throughput(axs[1], no[0], no[1], xmax, "(b) No overlap: read all, then copy")
         axs[1].set_xlabel("time since restore start (ms)", color=INK2)
     else:
         axs[0].set_xlabel("time since restore start (ms)", color=INK2)
     gantt(axs[-1], st, dur)
-    axs[-1].set_title(f"({'c' if no else 'b'}) Zoom: stages overlap", fontsize=7.5, color=INK,
+    axs[-1].set_title(f"({'c' if no else 'b'}) Zoom: stages overlap", fontsize=8, color=INK,
                       loc="left", pad=2)
     fig.savefig(a.out)
     fig.savefig(a.out.rsplit(".", 1)[0] + ".png", dpi=300)  # preview
