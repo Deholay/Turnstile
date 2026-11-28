@@ -1,0 +1,65 @@
+# job 497985 on hgpn46 Wed Nov 25 00:44:10 CST 2026
+0, NVIDIA H200, 550.127.08, 00000000:18:00.0
+1, NVIDIA H200, 550.127.08, 00000000:3A:00.0
+2, NVIDIA H200, 550.127.08, 00000000:4B:00.0
+3, NVIDIA H200, 550.127.08, 00000000:5C:00.0
+4, NVIDIA H200, 550.127.08, 00000000:9A:00.0
+5, NVIDIA H200, 550.127.08, 00000000:BA:00.0
+6, NVIDIA H200, 550.127.08, 00000000:CA:00.0
+7, NVIDIA H200, 550.127.08, 00000000:DA:00.0
+Personalities : [raid1] [raid0] 
+md131 : active raid0 nvme2n1[2] nvme5n1[5] nvme7n1[7] nvme6n1[6] nvme4n1[4] nvme3n1[3] nvme1n1[1] nvme0n1[0]
+      30004846592 blocks super 1.2 512k chunks
+/dev/md131     xfs    28T  200G   28T   1% /tmp
+fio-3.43
+08a593babe733852008fb35dcedd36f20da65175ee2b2ea99c18448decfd3b5c  /home/u1444832/p8/restore
+185ac58f1e53565e0216ada22dbd8a76738ea90076015bcd50a52212cb4eb02e  /home/u1444832/p8/src/iotrace.py
+22d422fc261a1f877d7a1f3c6b8abd9e2a6014badb9b1a7ac679348b88e2391a  /home/u1444832/p8/src/kvr_coord.h
+62b5f37ed527b66c1138ace3f92c4cfd64233f5d27af7164e61b2f1eae623f57  /home/u1444832/p8/src/kvr_core.cuh
+abb81a88ee15535127ec74d439696d94fecd05829714a054258ba5a17cd3f2cb  /home/u1444832/p8/src/restore.cu
+f744f735f6ec1c5b435a740aa32098bcae9fef6d6ade2f9cc69c25bfc5c78800  /home/u1444832/p8/launch.py
+900f06fa847a355a96d5629e1058309e10f8bd0ab2b4a5421c8bea0bbed052cd  /home/u1444832/p8/front_schedule.py
+663de05b388634492db9f4a1be2aa3f3ba22d38dc1e8b3c854441356cf2b5579  /home/u1444832/p8/prefill.csv
+3637a5e7be364c43c4b7415d04d476bb27fc6dab4e98fd14638777d44250e48a  /home/u1444832/p8/p8_job.sh
+== files 00:44:10
+== files done 00:44:14
+== cross_8b4k fair G=1 00:44:14
+== cross_8b4k fair G=8 00:44:16
+== cross_8b8k fair G=1 00:44:27
+== cross_8b8k fair G=8 00:44:28
+== front_fair_8b fair G=8 00:44:39
+== front_fair_70b fair G=8 00:44:51
+== writer start 00:45:08
+== concurrent_8b fair G=1 00:45:23
+== concurrent_70b fair G=1 00:45:25
+8b: B=27.6 GB/s t:measured k=[0, 8448, 13056, 16384, 18944, 20992, 22656, 23936]
+   predicted mean: fair 1.246  srpt 0.701  srpt+front 0.447  (recompute 0.957)
+70b: B=27.5 GB/s t:measured k=[0, 2944, 5248, 7296, 9088, 10624, 12160, 13184]
+   predicted mean: fair 3.121  srpt 1.756  srpt+front 1.467  (recompute 7.015)
+== wb_8b fair G=8 00:45:29
+== wb_8b srpt G=8 00:45:44
+== wbfront_8b srpt G=8 00:46:00
+== wb_70b fair G=8 00:46:13
+== wb_70b srpt G=8 00:46:33
+== wbfront_70b srpt G=8 00:46:58
+== writer stopped 00:47:19
+# crossover.csv mismatches=0
+RESULT cross_8b4k fair G=1 mean 0.013 max 0.013 reps 5
+RESULT cross_8b4k fair G=8 mean 0.081 max 0.087 reps 5
+RESULT cross_8b8k fair G=1 mean 0.024 max 0.024 reps 5
+RESULT cross_8b8k fair G=8 mean 0.160 max 0.176 reps 5
+# front_fair.csv mismatches=0
+RESULT front_fair_70b fair G=8 mean 0.933 max 1.594 reps 5
+RESULT front_fair_8b fair G=8 mean 0.311 max 0.487 reps 5
+# wb_single.csv mismatches=0
+RESULT concurrent_70b fair G=1 mean 0.391 max 0.391 reps 5
+RESULT concurrent_8b fair G=1 mean 0.156 max 0.156 reps 5
+# writeback.csv mismatches=0
+RESULT wb_70b fair G=8 mean 2.119 max 2.389 reps 5
+RESULT wb_70b srpt G=8 mean 1.749 max 3.111 reps 5
+RESULT wb_8b fair G=8 mean 0.932 max 1.045 reps 5
+RESULT wb_8b srpt G=8 mean 0.694 max 1.229 reps 5
+RESULT wbfront_70b srpt G=8 mean 1.465 max 2.390 reps 5
+RESULT wbfront_8b srpt G=8 mean 0.447 max 0.653 reps 5
+WRITER summary failed: Expecting value: line 2 column 1 (char 1)
+# done Wed Nov 25 00:47:19 CST 2026

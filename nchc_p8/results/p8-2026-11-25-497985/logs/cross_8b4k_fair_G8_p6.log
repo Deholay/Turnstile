@@ -1,0 +1,19 @@
+numactl --cpunodebind=1 --membind=1 /home/u1444832/p8/restore --file /tmp/p8_497985_p5f8/8b4k_6.bin --layers 32 --kv-heads 8 --head-dim 128 --tokens 4096 --threads 8 --qd 32 --mode copy --warmup 0 --runs 5 --go-file /tmp/kvr_launch_o6g7ij4o/go6 --start-tokens 0 --seed 1
+geometry: 32 layers x 4096 tokens, tok_bytes=2048, item=512 KiB, items=1024, file=0.50 GiB
+gpu: NVIDIA H200, mode=copy threads=8 qd=32 ring=256 batch=32 overlap=yes
+READY pid 3439663 run 0
+timing pid 3439663 run 0 bytes 536870912 start 2302361.069689 end 2302361.153421
+run 0: total 0.0837 s  read 0.0834 s  6.41 GB/s  layer0 16.04 ms  last 83.71 ms  mismatches 0
+READY pid 3439663 run 1
+timing pid 3439663 run 1 bytes 536870912 start 2302361.249747 end 2302361.335678
+run 1: total 0.0859 s  read 0.0858 s  6.25 GB/s  layer0 4.20 ms  last 85.92 ms  mismatches 0
+READY pid 3439663 run 2
+timing pid 3439663 run 2 bytes 536870912 start 2302361.440933 end 2302361.521640
+run 2: total 0.0807 s  read 0.0805 s  6.65 GB/s  layer0 14.11 ms  last 80.70 ms  mismatches 0
+READY pid 3439663 run 3
+timing pid 3439663 run 3 bytes 536870912 start 2302361.619302 end 2302361.699085
+run 3: total 0.0798 s  read 0.0795 s  6.73 GB/s  layer0 1.64 ms  last 79.77 ms  mismatches 0
+READY pid 3439663 run 4
+timing pid 3439663 run 4 bytes 536870912 start 2302361.816047 end 2302361.890167
+run 4: total 0.0741 s  read 0.0730 s  7.24 GB/s  layer0 23.85 ms  last 74.11 ms  mismatches 0
+median 0.0807 s (6.65 GB/s), IQR [0.0798, 0.0837]
